@@ -288,7 +288,7 @@ Answer (English):
 
 "Novalnet performs risk management checks before forwarding the payment request to the bank to detect fraud, validate customer and payment details, reduce chargebacks, and protect both the merchant and the customer. Only if the transaction passes these checks is it sent to the acquiring bank for authorization."
 
-Tanglish:
+
 
 "Customer payment click pannadhum request first Novalnet PSP server-ku pogum. Anga BIN Country Check, IP Check, Blacklist Check, Limit Check, Order Count Check, 3D Secure mathiri risk checks ellam nadakkum. Ella checks-um pass aana dhaan acquiring bank-ku request anuppuvanga. Idhanala fraud transactions avoid pannalaam, chargebacks reduce pannalaam, merchant-um customer-um safe-a iruppanga."
 
@@ -318,7 +318,7 @@ Definition (English)
 
 ID Reliability Check verifies whether the customer's identity information is genuine, complete, and trustworthy. It checks details such as name, address, date of birth, or identity records to reduce identity fraud.
 
-Tanglish
+
 
 ID Reliability Check na customer kudutha identity details (Name, Address, DOB, etc.) correct-a iruka, genuine person-a illaya nu verify pannuradhu.
 
@@ -352,7 +352,6 @@ Definition (English)
 
 TrustRank is a fraud risk score that measures how trustworthy a customer or transaction is based on previous payment history and behavior.
 
-Tanglish
 
 TrustRank na customer-ku oru trust score kudukkum. Previous payment history, fraud history, behavior ellam base panni score calculate pannuvanga.
 
@@ -391,7 +390,7 @@ Definition (English)
 
 Luhn Check validates whether a card number is structurally correct using the Luhn Algorithm. It checks the card format, not whether the account has money.
 
-Tanglish
+
 
 Luhn Check na card number format correct-a iruka nu algorithm use panni verify pannuradhu.
 
@@ -434,7 +433,7 @@ Definition (English)
 
 NovalShield is Novalnet's advanced fraud prevention system. It combines multiple risk checks, fraud detection rules, and machine learning to protect merchants from fraudulent transactions.
 
-Tanglish
+
 
 NovalShield na Novalnet-oda advanced fraud protection system.
 
@@ -538,3 +537,7 @@ Bank Authorization
 Payment Success / Failure
 
 This flow is easy to explain during a trainer review and shows how Novalnet performs multiple layers of validation before sending the payment request to the bank.
+
+
+
+
