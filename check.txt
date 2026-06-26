@@ -1,0 +1,540 @@
+Top 10 Important Risk Checks
+1. BIN Country Check
+Definition
+
+Card first 6–8 digits (BIN) use panni card which country-la issue pannadhu nu verify pannum.
+
+Example
+
+Customer says
+
+Country = India
+
+Card BIN = Germany
+
+Mismatch
+
+↓
+
+High Risk
+
+↓
+
+Payment Reject or Manual Review
+
+2. IP BIN Check
+Definition
+
+Customer IP country and Card BIN country compare pannum.
+
+Example
+
+IP
+
+India
+
+Card
+
+Russia
+
+↓
+
+Suspicious
+
+↓
+
+Fraud score increase
+
+3. Blacklist Check
+Definition
+
+Already fraud pannina customer details blacklist database-la iruka nu check pannum.
+
+Check
+Email
+Phone
+Card
+IP
+Example
+
+Fraud email
+
+abc@gmail.com
+
+Already blacklist
+
+↓
+
+Reject
+
+4. Bank Account Check (SEPA)
+Definition
+
+Customer bank account valid-aa iruka, SEPA payment receive panna support pannudha nu verify pannum.
+
+Example
+
+IBAN invalid
+
+↓
+
+Payment reject
+
+5. Debt Collection Check
+Definition
+
+Customer-ku already unpaid debt iruka nu verify pannum.
+
+Example
+
+Previous payment
+
+₹10,000 unpaid
+
+↓
+
+New payment
+
+↓
+
+Manual Review
+
+6. Limit Check
+Definition
+
+Maximum transaction limit exceed aagirucha nu check pannum.
+
+Example
+
+Merchant limit
+
+₹1,00,000
+
+Customer payment
+
+₹2,50,000
+
+↓
+
+Reject
+
+7. Order Count Limit
+Definition
+
+Short time-la same customer romba orders place pannara nu check pannum.
+
+Example
+
+5 minutes-la
+
+20 orders
+
+↓
+
+Bot attack
+
+↓
+
+Reject
+
+8. Failed Attempts Blockade
+Definition
+
+Repeated failed payment attempts block pannum.
+
+Example
+
+Wrong OTP
+
+5 times
+
+↓
+
+Account temporarily blocked
+
+9. Session Check
+Definition
+
+Customer genuine browser session use pannara nu verify pannum.
+
+Example
+
+Session expired
+
+↓
+
+Payment stop
+
+10. Enforced 3D Secure
+Definition
+
+Additional authentication (OTP/Bank App approval) mandatory.
+
+Example
+
+Customer
+
+Visa Card
+
+↓
+
+OTP
+
+↓
+
+Correct
+
+↓
+
+Payment Success
+
+Wrong
+
+↓
+
+Reject
+
+Third Man (PSP Server) What Happens?
+
+Imagine 3 persons.
+
+Customer
+      ↓
+Merchant
+      ↓
+Novalnet PSP
+      ↓
+Bank
+
+Customer payment click pannaar.
+
+Merchant details receive pannuvaar.
+
+Merchant immediately
+
+Novalnet Server-ku request send pannuvaar.
+
+Novalnet Server
+
+↓
+
+Checks
+
+✔ BIN Country
+
+✔ Blacklist
+
+✔ IP
+
+✔ Fraud Score
+
+✔ Card Validation
+
+✔ Order Count
+
+✔ 3D Secure
+
+✔ Limit
+
+✔ Session
+
+↓
+
+All checks pass
+
+↓
+
+Acquiring Bank
+
+↓
+
+Customer Bank
+
+↓
+
+Approved
+
+↓
+
+Merchant
+
+↓
+
+Order Completed
+
+Why PSP Checks First?
+
+Without checks
+
+❌ Stolen Card
+
+❌ Fake Email
+
+❌ VPN Fraud
+
+❌ Bot Orders
+
+❌ Chargeback
+
+Merchant-ku loss.
+
+So PSP first verify pannum.
+
+Easy Interview Answer
+
+Question: Why does Novalnet perform Risk Management checks before sending the payment to the bank?
+
+Answer (English):
+
+"Novalnet performs risk management checks before forwarding the payment request to the bank to detect fraud, validate customer and payment details, reduce chargebacks, and protect both the merchant and the customer. Only if the transaction passes these checks is it sent to the acquiring bank for authorization."
+
+Tanglish:
+
+"Customer payment click pannadhum request first Novalnet PSP server-ku pogum. Anga BIN Country Check, IP Check, Blacklist Check, Limit Check, Order Count Check, 3D Secure mathiri risk checks ellam nadakkum. Ella checks-um pass aana dhaan acquiring bank-ku request anuppuvanga. Idhanala fraud transactions avoid pannalaam, chargebacks reduce pannalaam, merchant-um customer-um safe-a iruppanga."
+
+💡 Trainer tip: From the list you shared, the 10 most commonly asked checks are:
+
+BIN Country Check
+IP BIN Check
+Blacklist Check
+Bank Account Check (SEPA)
+Debt Collection Check
+Enforced 3D Secure
+Failed Attempts Blockade
+Order Count Limit
+Session Check
+Limit Check
+
+If you understand these 10 well, you'll be able to explain most of Novalnet's risk management flow confidently.
+
+ID Reliability...
+TrustRank....,Luhn check....
+NovalShield (Protect your Business)....,Bürgel RiskCheck RealTime (B2B) (DE)......previous answer venum
+
+Sure bro! 👍 Below are the remaining important Risk Management checks in the same format (Definition + Example + Novalnet Role + Tanglish).
+
+1. ID Reliability Check
+Definition (English)
+
+ID Reliability Check verifies whether the customer's identity information is genuine, complete, and trustworthy. It checks details such as name, address, date of birth, or identity records to reduce identity fraud.
+
+Tanglish
+
+ID Reliability Check na customer kudutha identity details (Name, Address, DOB, etc.) correct-a iruka, genuine person-a illaya nu verify pannuradhu.
+
+Example
+
+Customer Name:
+
+Rahul Kumar
+
+Address:
+
+Chennai
+
+But identity database-la indha details match aagala.
+
+↓
+
+Identity reliability score low.
+
+↓
+
+Payment manual review-ku pogum or reject pannuvanga.
+
+Novalnet Role
+Verifies customer identity.
+Detects fake identities.
+Prevents identity fraud.
+Reduces payment risk.
+2. TrustRank
+Definition (English)
+
+TrustRank is a fraud risk score that measures how trustworthy a customer or transaction is based on previous payment history and behavior.
+
+Tanglish
+
+TrustRank na customer-ku oru trust score kudukkum. Previous payment history, fraud history, behavior ellam base panni score calculate pannuvanga.
+
+Example
+
+Customer A
+
+50 successful payments
+No chargebacks
+No fraud
+
+TrustRank = 95/100
+
+↓
+
+Payment approved quickly.
+
+Customer B
+
+New customer
+3 failed payments
+Fraud history
+
+TrustRank = 20/100
+
+↓
+
+Manual review or reject.
+
+Novalnet Role
+Calculates customer trust score.
+Detects risky customers.
+Helps approve genuine customers faster.
+3. Luhn Check
+Definition (English)
+
+Luhn Check validates whether a card number is structurally correct using the Luhn Algorithm. It checks the card format, not whether the account has money.
+
+Tanglish
+
+Luhn Check na card number format correct-a iruka nu algorithm use panni verify pannuradhu.
+
+👉 Important: Idhu balance check illa. Card number valid format-la iruka nu mattum check pannum.
+
+Example
+
+Card Number
+
+4111 1111 1111 1111
+
+↓
+
+Luhn Algorithm
+
+↓
+
+Valid
+
+↓
+
+Next verification.
+
+Wrong card number
+
+↓
+
+Invalid
+
+↓
+
+Immediately reject.
+
+Novalnet Role
+Validates card number format.
+Prevents typing mistakes.
+Stops invalid card transactions early.
+4. NovalShield (Protect Your Business)
+Definition (English)
+
+NovalShield is Novalnet's advanced fraud prevention system. It combines multiple risk checks, fraud detection rules, and machine learning to protect merchants from fraudulent transactions.
+
+Tanglish
+
+NovalShield na Novalnet-oda advanced fraud protection system.
+
+Idhu ore time-la IP, BIN, Blacklist, Device, Behavior, Country, Velocity mathiri neraya checks combine panni fraud detect pannum.
+
+Example
+
+Customer
+
+VPN use pannuraru
+New device
+Germany Card
+India IP
+10 orders in 5 minutes
+
+↓
+
+NovalShield score
+
+High Risk
+
+↓
+
+Payment blocked.
+
+Novalnet Role
+Combines multiple fraud checks.
+Calculates overall fraud score.
+Protects merchants from scams.
+Reduces chargebacks.
+5. Bürgel RiskCheck RealTime (B2B) (DE)
+Definition (English)
+
+Bürgel RiskCheck RealTime (B2B) is a real-time business credit and risk assessment service for companies in Germany. It checks whether a business customer is financially reliable before allowing payment.
+
+Tanglish
+
+Bürgel RiskCheck RealTime (B2B) Germany company customers-ku use pannura business credit check.
+
+Company financially reliable-a iruka, debt iruka, credit score epdi nu verify pannum.
+
+Example
+
+ABC Pvt Ltd (Germany)
+
+Wants to buy products worth
+
+€50,000
+
+↓
+
+Novalnet calls Bürgel service.
+
+↓
+
+Credit score = Good
+
+↓
+
+Order approved.
+
+Another company
+
+↓
+
+Poor credit history
+
+↓
+
+Payment rejected or advance payment requested.
+
+Novalnet Role
+Checks business creditworthiness.
+Reduces B2B payment risk.
+Prevents bad debt.
+Supports secure business transactions.
+Interview Answer (Very Short)
+Check	One-Line Answer
+ID Reliability	Verifies whether the customer's identity details are genuine and trustworthy.
+TrustRank	Assigns a trust score based on the customer's payment history and behavior.
+Luhn Check	Validates whether the card number format is correct using the Luhn algorithm.
+NovalShield	Novalnet's advanced fraud prevention system that combines multiple risk checks.
+Bürgel RiskCheck (B2B)	Checks the creditworthiness and financial reliability of business customers in Germany before approving payments.
+Easy Flow to Remember
+Customer Payment
+        ↓
+Novalnet Server
+        ↓
+Luhn Check (Card Format)
+        ↓
+ID Reliability (Identity)
+        ↓
+TrustRank (Trust Score)
+        ↓
+NovalShield (Overall Fraud Analysis)
+        ↓
+Bürgel RiskCheck (Business Credit Check - B2B)
+        ↓
+Bank Authorization
+        ↓
+Payment Success / Failure
+
+This flow is easy to explain during a trainer review and shows how Novalnet performs multiple layers of validation before sending the payment request to the bank.
