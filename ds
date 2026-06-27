@@ -1,0 +1,84 @@
+    1. Novalnet AG - Risk Management Modules
+Risk management is the process to identify the frauds / risk in advance, in order to minimize the negative impact before payment processing. In Novalnet, we have more than 50+ fraud checks in this few fraud checks only processed by a third party team.
+        1.1 Fraud Modules List
+            1.1.1 acdc ® Pool
+Validates buyers by checking against acdc (account check direct control), a data pool containing buyer details such as return debit quotes, negative listings of bank accounts. This serves as an extra layer to protect against return debits, bad debts and related financial loss.
+            1.1.2 Bank account check SEPA
+Verifies the bank account details of buyers in real time and determines whether the combination of IBAN/bank accounts and bank codes of the respective countries are valid.
+            1.1.3 BIN country check
+This check controls and compares the buyer country of origin and the country of origin of the card-issuing bank. The first numbers of the BIN refer to the country's credit card-issuing bank (Issuer). Should the buyer be for example from Germany and the credit card belongs to America, then the transaction will be rejected.
+            1.1.4 Blacklist check
+The blacklist check queries our internal database to see if the buyer is already blacklisted in our system. In case a fraud is being attempted, the transaction will be blocked, the incident recorded and both the merchant and the identity theft victim will be notified about any data misuse.
+            1.1.5 Bürgel ConCheck RealTime (CH)
+Provides reliable assessment in terms of the risk of payment defaults from buyers in real time through various information and data pools listed below. Activating this tool significantly reduces return debit rates:
+
+            1.1.6 Bürgel ConCheck RealTime (AT)
+Provides reliable assessment in terms of the risk of payment defaults from buyers in real time through various information and data pools listed below. Activating this tool significantly reduces return debit rates:
+            1.1.7 Bürgel ConCheck RealTime (DE)
+Provides reliable assessment in terms of risk of payment defaults in real time through various information and data pools listed below. Activating this tool significantly reduces return debit rates:
+                1.1.7.1 Bürgel ConCheck RealTime Deltavista
+This tool accesses Deltavista negative database along with Bürgel negative	database, in real time to validate transactions. This combination significantly increases the score quality and value, resulting in fewer non-payments and increase in turnover.
+                1.1.7.2 Bürgel RiskCheck RealTime (B2B) (DE)
+
+Provides reliable assessment in terms of the risk of payment defaults from buyers (private individuals & organizations) in real time through various information and data pools listed below. Activating this tool significantly reduces return debit rates:
+Exclusive debt collection data from EOS Group (Otto Group), Euler Hermes Group (Allianz Group) & Bürgel organization
+Assessing all legal forms of organizations, such as commercial companies, sole traders, freelancers etc
+Integrated score for assessment of risks of default (Schober Direct Media) Integrated address check and address verification
+Early-warning indicators of buyers payment behavior to minimize of default risks Information on negative criteria and insolvencies of both private individuals & organizations
+
+            1.1.8 Debt collection check
+This check declined transactions from buyers with pending claims listed in our debt collection database. Also this check validates the buyer against all debt collection entries from the entire customer base of Novalnet.
+            1.1.9 Double booking blockade - in Seconds: 8
+Prevents unintentional duplicate registrations and transactions from the same buyer, eliminating additional expenses through double bookings and resulting refunds chargebacks/return debits costs. This check matches names, email addresses and bank or credit card details. Duration of the block can be set in seconds (recommended time frame is 60 seconds) as required by the customers.
+            7.2.0 EMail validation
+E-mail addresses are validated based on whether it complies with RFC 822 specifications. We will not be able to verify the delivery status of an email address though. If a customer demands, we have the option to set filters to block out spam domains.
+            7.2.1 Enforced 3D secure (as per predefined filters & settings)
+Activates 3D Secure process based on the filters and settings configured by customers .The transaction will be routed to authenticate via 3DSecure only if the predefined conditions triggers to do so; otherwise, it will be processed as a non-3D Secure transaction.
+            7.2.2 Failed Attempts Blockade - after 3 attempts in 10 Minute(s) blocked for 1 Hour(s)
+Failed Attempts Blockade prevents repeated payment attempts in rapid succession by the same customer, so that you will be safeguarded against brute force and carding attacks. This module works by comparing the email and payment details of customers separately against previous failed attempts with the same data. By default, payment attempts are blocked for 1 hour after 3 prior failures are detected in the past 10 minutes. These settings can be changed in your merchant account of Novalnet according to your convenience.
+
+            7.2.3 Identity Fraud Check (IFC)
+Verifies and determines the identity and address details of buyers in real time. This includes examining the accuracy of address and identification quality by triggering the following checks:
+                7.2.3.1 ID Reliability
+Accuracy of the requested address is verified, i.e. deviations in name, date of birth or e-mail address. Reliable addresses with better identification quality tend to result in fewer payment declines, better postal deliverability, higher collection rates (during collection process) and an overall reduction in cases of fraud. The check classifies the identification on a scale from A to D: Addresses rated A are considered as neutral, while the ratings B to D indicates an increased risk due to uncertainties in identification. Value D points to a significantly higher risk of non-payment.
+                7.2.3.2 TrustRank
+Provides a score from a scale from 1 to 10, indicating the stability of a requested address. For example, TrustRank value of 10 indicates a long-term reliable address and a high level of network with other long-term trusted addresses which means that the address is reliable and dependable.
+                7.2.3.3 Suspicious houses
+Calculates statistical building characteristics to detect anomalies and increased risk of nonpayment. If the check reacts to a specific building in an inquiry, there is an increased risk of default for this address.
+            7.2.4 IP BIN check
+Compares and validates the IP addresses and BINs (Bank Identification Number) of buyers. Customers have the option to reject transactions originating from a country different from where the credit/debit cards are issued.
+            7.2.5 IP blockade - after 127 Try for: 30min
+This module blocks IP addresses after a set number of invalid attempts of the buyer within a set timeframe, defined by the customer at Novalnet backend. (number of attempts could be 3 and timeframe could be from 30 minutes to a maximum of 24 hours). Even if a fraudulent buyer
+
+attempts transactions using different payment data, the customer is protected with the help of the many fraud prevention modules activated.
+            7.2.6 IP country blockade
+IP Country block, also known as Geo-blocking, helps block transactions from specific countries. This allows Customers to restrict transactions originating in countries where they do not deliver or due to known higher fraud rates.
+            7.2.7 Limit check
+Limit check allows customers to predefine purchase limits for buyers in web shops, which cannot be exceeded within a set period of time. The limit check allows customers to define the maximum limit and the period. This check minimizes payment failures and restricts fraudsters.
+            7.2.8 Luhn check
+Credit cards use the Luhn algorithm (also known as modulus 10 or mod 10 algorithm), to distinguish valid numbers from mistyped or otherwise incorrect numbers. Using this algorithm, we validate credit card numbers (ranges between 13 and 19) to protect against accidental and/or human errors. CVC codes are also checked before sending card details for authorization.
+            7.2.9 NovalShield (Protect your Business)
+Real-time AI-powered fraud tool, designed to detect a vast range of payment fraud for any business and industry.
+Novalshield performs billions of calculations and returns a transaction fraud score in a matter of milliseconds for fast and accurate decisions by the payment system.
+            7.3.0 Order count limit
+Allows only a set number of transaction attempts by a buyer within a period of time predefined by the customer.
+
+            7.3.1 PIN by callback (Telephone, DE)
+Buyers receive a 4-digit PIN on their mobile or landline number via a callback and they should enter this PIN to complete the transaction/purchases. This helps to confirm the identity of buyers in real-time.
+            7.3.2 PIN by SMS
+Buyers will receive a 4-digit PIN via SMS on their mobile phones and they should enter this PIN to complete the transaction/purchases. This helps to confirm the identity of buyers in real-time.
+            7.3.3 Postal address check United Kingdom
+Sort Codes and bank account numbers in the U.K and Ireland are validated in real time using specific mathematical algorithms to verify if an account number has been correctly entered. Also a second layer of validation is performed by searching for the existence of sort codes in the Sort Codes Directory issued by BACS.
+            7.3.4 Sanctions list Check
+Offers a consolidated sanction list review (EU), listing all persons, organizations and companies that are subject to financial sanctions by the EU. Activating this tool will allow customers to look for any anomalies based on the data used during transactions. If the data is flagged, the transaction will be rejected.
+            7.3.5 SEPA prenotification by SMS (DE, AT)
+To comply with SEPA regulations, customers should inform buyers in advance when and how much will be debited from their bank account. This notification gives buyers enough time to ensure sufficient funds in their bank accounts. SEPA pre-notification SMS is sent to buyers without a valid email address.
+            7.3.6 Session check
+The session check verifies if any successful transaction has been made during the active session. If a successful transaction has been processed, then there will not be any further transactions allowed with the same session.
+
+                7.3.6.1 Subscription check
+This check prevents duplicate subscriptions by verifying whether an active subscription already exist by matching the user's first name, family name, e-mail address and bank or credit card data.
+                7.3.6.2 User & Payment Details comparison
+The check looks for previous successful bookings with the same payment details (bank details / credit card details). If such previous bookings are found, but the name, the zip code, the country or the email address differ in the current transaction, then the current transaction will be rejected. The check will only be applied for Direct Debit SEPA transactions and for credit card transactions.
+            7.3.7 VAT ID Check
+Validates VAT identification numbers issued by any EU Member States (VIES database).
