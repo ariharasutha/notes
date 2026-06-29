@@ -541,3 +541,555 @@ This flow is easy to explain during a trainer review and shows how Novalnet perf
 
 
 
+Yes. Let's start with the first **10 Risk Management modules** in **simple Thanglish**.
+
+The definitions below are based on the uploaded Novalnet Risk Management document. 
+
+---
+
+# 1. acdc® Pool
+
+### Definition
+
+**acdc® Pool** na, customer bank account history-ah check panni, already return debit, bad debt, negative records irukka nu verify pannura fraud check.
+
+### Example
+
+* Customer bank account-ku previous unpaid payments irukku.
+* acdc® Pool check pannum.
+* High risk-na payment reject pannalam.
+
+**Novalnet Role:**
+Customer financial history check panni fraud risk reduce pannum.
+
+---
+
+# 2. Bank Account Check (SEPA)
+
+### Definition
+
+**Bank Account Check (SEPA)** na, customer IBAN and bank account valid-ah irukka nu real-time-la verify pannura check.
+
+### Example
+
+* Customer wrong IBAN enter pannrar.
+* SEPA check invalid nu identify pannum.
+* Payment reject aagum.
+
+**Novalnet Role:**
+Invalid bank accounts use pannama protect pannum.
+
+---
+
+# 3. BIN Country Check
+
+### Definition
+
+**BIN Country Check** na, card issue panna country-um customer country-um compare pannura fraud check.
+
+### Example
+
+* Customer Country = Germany
+* Card BIN Country = USA
+
+Mismatch → High Risk → Reject.
+
+**Novalnet Role:**
+Foreign stolen cards detect panna help pannum.
+
+---
+
+# 4. Blacklist Check
+
+### Definition
+
+**Blacklist Check** na, customer email, phone, IP, bank account already fraud list-la irukka nu verify pannura check.
+
+### Example
+
+Fraud customer previous scam pannirukkar.
+
+Blacklist-la irukkar.
+
+Payment automatically block aagum.
+
+**Novalnet Role:**
+Known fraudsters-ah prevent pannum.
+
+---
+
+# 5. Bürgel ConCheck RealTime
+
+### Definition
+
+**Bürgel ConCheck** na, customer payment default risk-ah external databases use panni real-time-la assess pannura service.
+
+### Example
+
+Customer-ku previous unpaid loans irukku.
+
+System high-risk score kudukkum.
+
+Merchant manual review pannuvaar.
+
+**Novalnet Role:**
+Payment default risk reduce pannum.
+
+---
+
+# 6. Debt Collection Check
+
+### Definition
+
+**Debt Collection Check** na, customer-ku already pending unpaid debts irukka nu Novalnet debt collection database-la verify pannura check.
+
+### Example
+
+Customer previous merchant-ku ₹10,000 pay pannala.
+
+Database-la record irukku.
+
+New payment reject aagalam.
+
+**Novalnet Role:**
+Bad debt customers identify pannum.
+
+---
+
+# 7. Double Booking Blockade
+
+### Definition
+
+**Double Booking Blockade** na, same customer short time-la duplicate order/payment panna prevent pannura check.
+
+### Example
+
+Customer double-click "Pay Now".
+
+Same payment rendu thadava process aagadhu.
+
+**Novalnet Role:**
+Duplicate payments avoid pannum.
+
+---
+
+# 8. Email Validation
+
+### Definition
+
+**Email Validation** na, customer email correct format-la irukka nu verify pannura check.
+
+### Example
+
+✔ [abc@gmail.com](mailto:abc@gmail.com) → Valid
+
+❌ abc@gmail → Invalid
+
+**Novalnet Role:**
+Wrong email and spam emails reduce pannum.
+
+---
+
+# 9. Enforced 3D Secure
+
+### Definition
+
+**3D Secure** na, OTP/password verification use panni genuine card owner dhaan payment pannraru nu confirm pannura security check.
+
+### Example
+
+Customer credit card use pannrar.
+
+OTP mobile-ku varum.
+
+Correct OTP enter pannina payment success.
+
+**Novalnet Role:**
+Card fraud reduce pannum.
+
+---
+
+# 10. Failed Attempts Blockade
+
+### Definition
+
+**Failed Attempts Blockade** na, repeated wrong payment attempts detect panni temporary-ah block pannura security module.
+
+### Example
+
+Wrong card details:
+
+* Attempt 1 
+* Attempt 2 
+* Attempt 3 
+
+Account/IP 1 hour block.
+
+**Novalnet Role:**
+Brute-force and carding attacks prevent pannum.
+
+---
+
+These explanations are aligned with the uploaded Novalnet document. 
+
+In the next part, I can explain modules **11–20** (Identity Fraud Check, ID Reliability, TrustRank, IP BIN Check, IP Blockade, Luhn Check, NovalShield, etc.) in the same interview-friendly format.
+
+
+Sure! Here are the **remaining Risk Management modules (11–28)** with **simple definition, example, and Novalnet AG role** in Thanglish, based on your uploaded document. 
+
+---
+
+# 11. Identity Fraud Check (IFC)
+
+### Definition
+
+Identity Fraud Check na, customer name, address, email, and identity details correct-ah irukka nu verify pannura check.
+
+### Example
+
+Customer fake address kuduthaar.
+
+IFC detect pannum.
+
+Payment reject or manual review.
+
+**Novalnet Role:**
+Fake identities detect panni fraud prevent pannum.
+
+---
+
+# 12. ID Reliability
+
+### Definition
+
+ID Reliability na, customer identity and address evlo accurate nu score kudukkura check.
+
+### Example
+
+Correct address → High reliability.
+
+Wrong address → Low reliability.
+
+**Novalnet Role:**
+Reliable customers identify pannum.
+
+---
+
+# 13. TrustRank
+
+### Definition
+
+TrustRank na, customer address trustworthy-ah irukka nu 1–10 score kudukkura check.
+
+### Example
+
+TrustRank = 10 → Very reliable.
+
+TrustRank = 2 → High risk.
+
+**Novalnet Role:**
+Customer trust level evaluate pannum.
+
+---
+
+# 14. Suspicious Houses
+
+### Definition
+
+Suspicious Houses na, fraud activities adhigama nadakkura address/building identify pannura check.
+
+### Example
+
+Oru address-la repeated fraud cases.
+
+System high risk nu mark pannum.
+
+**Novalnet Role:**
+Fraud-prone addresses detect pannum.
+
+---
+
+# 15. IP BIN Check
+
+### Definition
+
+IP BIN Check na, customer IP country-um card BIN country-um compare pannura check.
+
+### Example
+
+IP = India.
+
+Card BIN = Russia.
+
+Mismatch → High Risk.
+
+**Novalnet Role:**
+Stolen or suspicious cards identify pannum.
+
+---
+
+# 16. IP Blockade
+
+### Definition
+
+IP Blockade na, same IP-lendhu repeated failed payment attempts vandha temporary block pannura security.
+
+### Example
+
+10 wrong payment attempts.
+
+IP blocked for 30 minutes.
+
+**Novalnet Role:**
+Hackers and brute-force attacks prevent pannum.
+
+---
+
+# 17. IP Country Blockade
+
+### Definition
+
+IP Country Blockade na, merchant allow pannaadha countries-lendhu transactions block pannura check.
+
+### Example
+
+Merchant India-ku mattum sell pannrar.
+
+IP Nigeria.
+
+Transaction reject.
+
+**Novalnet Role:**
+Geo-based fraud reduce pannum.
+
+---
+
+# 18. Limit Check
+
+### Definition
+
+Limit Check na, customer predefined purchase limit exceed pannraangala nu verify pannura check.
+
+### Example
+
+Daily limit = ₹50,000.
+
+Customer tries ₹70,000.
+
+Payment reject.
+
+**Novalnet Role:**
+High-value fraud transactions prevent pannum.
+
+---
+
+# 19. Luhn Check
+
+### Definition
+
+Luhn Check na, credit/debit card number valid format-la irukka nu mathematical algorithm use panni verify pannura check.
+
+### Example
+
+Customer wrong card number enter pannrar.
+
+Luhn check fail.
+
+Payment reject.
+
+**Novalnet Role:**
+Invalid card numbers detect pannum.
+
+---
+
+# 20. NovalShield
+
+### Definition
+
+NovalShield na, AI-based fraud detection system. Transaction risk score calculate pannum.
+
+### Example
+
+AI suspicious behavior detect pannum.
+
+Risk score high.
+
+Payment manual review or reject.
+
+**Novalnet Role:**
+Real-time AI fraud prevention.
+
+---
+
+# 21. Order Count Limit
+
+### Definition
+
+Order Count Limit na, customer specific time-kulla evlo orders panna mudiyum nu limit set pannura check.
+
+### Example
+
+Maximum 5 orders/day.
+
+6th order reject.
+
+**Novalnet Role:**
+Abnormal ordering prevent pannum.
+
+---
+
+# 22. PIN by Callback
+
+### Definition
+
+PIN by Callback na, customer phone-ku call panni 4-digit PIN provide panni identity verify pannura method.
+
+### Example
+
+Customer call receive pannrar.
+
+PIN enter pannina payment continue.
+
+**Novalnet Role:**
+Customer identity confirm pannum.
+
+---
+
+# 23. PIN by SMS
+
+### Definition
+
+PIN by SMS na, customer mobile-ku SMS-la PIN anuppi verify pannura method.
+
+### Example
+
+SMS OTP = 4821.
+
+Correct PIN enter pannina payment success.
+
+**Novalnet Role:**
+Additional payment security provide pannum.
+
+---
+
+# 24. Postal Address Check (UK)
+
+### Definition
+
+Postal Address Check na, UK/Ireland bank account and postal details valid-ah irukka nu verify pannura check.
+
+### Example
+
+Wrong sort code.
+
+Validation fail.
+
+**Novalnet Role:**
+Incorrect bank details detect pannum.
+
+---
+
+# 25. Sanctions List Check
+
+### Definition
+
+Sanctions List Check na, customer name international sanctions list-la irukka nu verify pannura check.
+
+### Example
+
+Customer sanctioned organization list-la irukkar.
+
+Transaction reject.
+
+**Novalnet Role:**
+Legal compliance maintain pannum.
+
+---
+
+# 26. SEPA Prenotification by SMS
+
+### Definition
+
+SEPA Prenotification na, bank account-lendhu amount debit aaguradhukku munnadi customer-ku SMS notification anuppura process.
+
+### Example
+
+"Tomorrow ₹2,000 debit aagum."
+
+Customer-ku SMS varum.
+
+**Novalnet Role:**
+SEPA regulation comply panna help pannum.
+
+---
+
+# 27. Session Check
+
+### Definition
+
+Session Check na, same login session-la duplicate successful payments nadakkama prevent pannura check.
+
+### Example
+
+Already payment success.
+
+Same session-la second payment try pannina reject.
+
+**Novalnet Role:**
+Duplicate transactions avoid pannum.
+
+---
+
+# 28. Subscription Check
+
+### Definition
+
+Subscription Check na, same customer-ku already active subscription irukka nu verify pannura check.
+
+### Example
+
+Netflix subscription already active.
+
+Customer same plan marubadiyum subscribe panna try pannrar.
+
+Duplicate subscription prevent pannum.
+
+**Novalnet Role:**
+Duplicate recurring subscriptions avoid pannum.
+
+---
+
+# 29. User & Payment Details Comparison
+
+### Definition
+
+User & Payment Details Comparison na, previous successful transaction details-um current transaction details-um compare pannura check.
+
+### Example
+
+Same card.
+
+Different name and email.
+
+Transaction reject.
+
+**Novalnet Role:**
+Identity mismatch detect pannum.
+
+---
+
+# 30. VAT ID Check
+
+### Definition
+
+VAT ID Check na, business customer VAT number valid-ah irukka nu verify pannura check.
+
+### Example
+
+Company VAT ID enter pannum.
+
+System EU database-la verify pannum.
+
+**Novalnet Role:**
+Valid business customers identify panni tax compliance maintain pannum.
+
