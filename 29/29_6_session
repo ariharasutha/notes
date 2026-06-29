@@ -1,0 +1,36 @@
+Prepayment:
+
+Prepayment payment is an in-house payment for Novalnet AG. 
+Once the order is placed in this payment type, the end customer should pay the amount for the order within some duration interval. 
+Once the payment is received, the merchant will deliver the product based on the shipping duration.
+
+Process
+The end customer/user selects the product and adds the selected product to the cart. And proceed to checkout.
+If it’s registered customers, they enter their login credentials and click login.
+Enter the billing and shipping address if needed.
+If it’s guest customers, they need to enter their billing and shipping address
+They select the Invoice / Prepayment payment type and click the pay button.
+From the shop, parameters were formed and sent a request to the Novalnet server (PSP).
+Once the request is received from the shop, Novalnet will check the mandatory parameters; once all the mandatory parameters from the request are valid, TID (Transaction ID) will get generated.
+If the requests are invalid, TID will generate a respective error message and redirect to the shop checkout/payment page.
+Once TID is generated with a valid request, Novalnet will execute the fraud checks one by one based on the fraud module enabled by the merchant in the admin portal.
+Enabled fraud module checks get completed. After that, the Novalnet server will send a response with transaction details, bank details, the payment due date, and payment reference to the shop.
+If any one of fraud checks fails, redirects to the shop checkout/payment page with respective error messages.
+
+Bank Details
+Account Holder Name: Novalnet AG
+Bank: Raiffeisenlandesbank OÖ Zndl Süddeutschland Passau
+IBAN: DE92740201500000889824
+BIC: RZOODE77050
+Due Date: MM DD YYYY
+Payment Reference 1: (Transaction ID)
+Payment Reference 2: BNR – Project ID – Order No
+
+
+invoice:
+Invoice payment is an in-house payment for Novalnet AG. 
+Once an order is placed in this payment type, the merchant delivers the product to the end customer within the shipping duration. Therefore,
+the end customer should pay the amount for the order after the product reaches some duration interval.
+
+
+
