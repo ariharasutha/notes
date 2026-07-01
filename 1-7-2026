@@ -1,0 +1,191 @@
+acquirer fuctionality:
+recive payment request
+routes the transactions
+request authorization
+receive the response
+handless settlement
+ensure secure processing
+
+
+credit card setting 
+
+1.enable payment method
+
+2.enable test mode
+
+3.complete order status
+
+4.select shipping  method
+
+5.payment name & instruction language
+
+6.method
+
+7.description
+
+8.title
+
+9.accepted virtual product
+
+10.inline form
+
+11.oneclick shoping
+
+12.enforce 3d secure out eu
+
+13.display credit,debit card logo
+
+14.minimum order amount
+
+15.css setting:
+
+ lable
+ 
+ input
+ 
+ css
+ 
+ 
+ credit card payment process
+ 
+ merchant shop
+ 
+ pandata,unique id request->
+ <-panhash,unique id responde
+ final request payment call request->
+ 
+ psp
+ 
+ acquirer bank
+ 
+ card network
+ 
+ issue bank
+ 
+ 
+ invoice
+ invoice payment proces is the in house payment type in ag ,once placed an order this method type ,
+ merchant delivers the product to end customer within shipping  duration,
+ therfore end customer sholud pay the amount for order after product reaches with some duration interavl
+ 
+ prepayment 
+ 
+ prepayment process is an in house payment method type for novalnet AG,once placed an order in this payment type,the end customer pay amount for product with in some duration
+ once recevied the payment,merchant will delivers porduct within shipping duration
+ 
+ credit card
+ 
+ pandata with unique id send the request to navalnet server from the shop
+ return response from novalnet server to shop with panhash,unique id
+ payment call req to navalnet server from the shop sysyem
+ 
+ navalnet server request send to aquirer bank
+ after
+ 
+ 
+ invoice backend setting
+ 
+  prepayment backend configuration setting
+
+ card network
+ issue bank
+
+
+after payment process:
+
+nn_pay_order
+1
+tid
+15414500118728123
+txn_secret
+c02ea5a536fd2c34da086dac914d0803
+(empty)
+(empty)
+payment_type
+CREDITCARD
+wc-api
+response_novalnet_cc
+key
+wc_order_90fIDmtHzwFOs
+order-id
+55
+checksum
+efea02cde075c60b06939ec635421deb6fec0ea5a395477c5aa6191ad445944f
+status_code
+100
+status_text
+Successful
+status
+SUCCESS
+nn_return
+
+direct
+redirect
+invoice
+prepayment
+aq-bank
+feature funtionality
+issue-bank
+card network
+
+
+
+request:
+
+amount
+: 
+"2300"
+billing_country_code
+: 
+"DE"
+browser_data
+: 
+"eyJqYXZhX2VuYWJsZWQiOmZhbHNlLCJ1c2VyX2FnZW50IjoiTW96aWxsYS81LjAgKFgxMTsgVWJ1bnR1OyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDkuMC4wLjAgU2FmYXJpLzUzNy4zNiIsImxhbmciOiJlbi1HQiIsImNvbG9yX2RlcHRoIjoyNCwic2NyZWVuX2hlaWdodCI6MTA4MCwic2NyZWVuX3dpZHRoIjoxOTIwLCJ0eiI6LTMzMH0="
+card_expiry_month
+: 
+"12"
+card_expiry_year
+: 
+"34"
+card_holder
+: 
+"ari m"
+currency
+: 
+"EUR"
+lang
+: 
+"EN"
+pan_data
+: 
+"ivpl1kEGS0+yNfRmZjKD+XgPgaVx5RjAboc9LqI4RUvKem5VtE02ZtK/mYL9S/g3exn+8iHo8Lw1jGA5tW3yi+342vGJd7VHLwrwUZnhtCTc0qq8oCKVUQ6pj4tEd8KxjCUVkxpp0C3+6ARd0chg9SuCPzUxc5xntQB28Nc/0l4="
+payment_method
+: 
+"CREDITCARD"
+product
+: 
+"14"
+uniqid
+: 
+"iDKzo87yRp0iYpIzMfiVZBzAlOECaz"
+vendor
+: 
+"4"
+
+
+response:
+
+  "card_expiry_month": "12",
+    "card_expiry_year": "32",
+    "card_holder": "ari m",
+    "card_type": "VISA",
+    "do_redirect": 1,
+    "masked_card_number": "XXXXXXXXXXXX1091",
+    "pan_hash": "mjoiapsd5yvhr0lkfx876923e1b4c1782900426",
+    "status": "SUCCESS",
+    "status_code": "100",
+    "status_text": "successful",
+    "threed_auth": 0,
+    "uniqid": "XfmdymLKMlLNJo0nrhvY5DspAIOmJm"
+
+
