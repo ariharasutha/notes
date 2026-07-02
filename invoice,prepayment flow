@@ -1,0 +1,132 @@
+Customer
+    │
+    ▼
+1. Select Product
+    │
+    ▼
+2. Place Order
+    │
+    ▼
+3. Shop (WooCommerce)
+       │
+       │ Payment API Request
+       │
+       ▼
+4. Novalnet Payment Server
+       │
+       │ Validate Parameters
+       │
+       ├─ Merchant Details
+       ├─ Amount
+       ├─ Currency
+       ├─ Customer Details
+       └─ Payment Type (INVOICE)
+       │
+       ▼
+5. Generate TID
+(Transaction ID)
+       │
+       ▼
+6. Fraud & Risk Checks
+       ├─ Identity Check
+       ├─ Credit Check
+       ├─ Address Check
+       ├─ Fraud Detection
+       └─ Blacklist Check
+       │
+       ├──────────────┐
+       │              │
+     Failed        Success
+       │              │
+       ▼              ▼
+ Payment Failed   Invoice Approved
+                      │
+                      ▼
+7. Success Response
+(TID + Status + Invoice Details)
+                      │
+                      ▼
+8. Shop Creates Order
+                      │
+                      ▼
+9. Merchant Ships Product
+                      │
+                      ▼
+10. Customer Pays Later
+(Bank Transfer)
+                      │
+                      ▼
+11. Customer Bank
+                      │
+                      ▼
+12. Novalnet Receives Payment
+                      │
+                      ▼
+13. Payment Confirmed
+                      │
+                      ▼
+14. Settlement to Merchant
+
+
+prepayment:
+Customer
+    │
+    ▼
+1. Select Product
+    │
+    ▼
+2. Place Order
+    │
+    ▼
+3. Shop (WooCommerce)
+       │
+       │ Payment API Request
+       ▼
+4. Novalnet Payment Server
+       │
+       │ Validate Parameters
+       │
+       ├─ Merchant Details
+       ├─ Amount
+       ├─ Currency
+       ├─ Customer Details
+       └─ Payment Type (PREPAYMENT)
+       │
+       ▼
+5. Generate TID
+(Transaction ID)
+       │
+       ▼
+6. Basic Validation
+(No credit/fraud approval like Invoice)
+       │
+       ▼
+7. Success Response
+(TID + Bank Details)
+       │
+       ▼
+8. Shop Creates Order
+(Status = Pending / On Hold)
+       │
+       ▼
+9. Customer Transfers Money
+       │
+       ▼
+10. Customer Bank
+       │
+       ▼
+11. Novalnet Receives Payment
+       │
+       ▼
+12. Payment Confirmation
+(Webhook / Callback)
+       │
+       ▼
+13. Shop Updates Order
+(Status = Processing)
+       │
+       ▼
+14. Merchant Ships Product
+       │
+       ▼
+15. Settlement Completed
