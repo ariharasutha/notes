@@ -1,0 +1,68 @@
+aqucirer:
+Acquirer na merchant side bank or financial institution. Customer payment request-a PSP (Novalnet) kitte irundhu receive pannum.
+Adha Visa/Mastercard network moolama customer issuing bank-ku authorization-ku anuppum. Bank approve pannina response-a merchant kitte reach panna help pannum.
+Successful payment-ku apram settlement, refund, chargeback, fraud monitoring ellam acquirer handle pannum.
+
+psp direct why acquirer:
+PSP (Novalnet) payment integration, API communication, fraud checks, payment method management ellam handle pannum. 
+Aana card payment-ku authorization, Visa/Mastercard network communication, settlement, chargeback processing panna Acquirer venum.
+Visa/Mastercard network-ku direct access Acquirer-ku dhaan irukkum. Adhanala PSP direct-a issuing bank-kooda communicate pannama, Acquirer moolama transaction process pannum.
+
+Acquirer-oda main functionality payment authorization, transaction routing, clearing, 
+settlement, merchant account management, refund processing, chargeback handling, fraud monitoring, PCI DSS compliance, reporting.
+Simple-ah sonna, customer bank-lendhu merchant account-ku payment safely process aagi settle aaguradhu Acquirer-oda responsibility.
+Card networks (Visa, Mastercard, etc.) generally allow only licensed acquiring banks (or licensed acquirers/payment institutions with acquiring capabilities) to submit transactions into their network. 
+Therefore, an acquirer is required
+
+
+
+Acquirer enna functionality :
+
+Acquirer-oda main job card payment process panni, merchant-ku amount settle pannuradhu. Idhoda important functionalities keela irukku.
+
+Functionality	Tanglish Explanation
+1. Payment Authorization	Customer bank kitte payment approve/reject request anuppum.
+2. Transaction Routing	Visa, Mastercard, RuPay, Amex nu correct card network-ku transaction anuppum.
+3. Settlement	Successful payment apram merchant account-ku amount transfer (settle) pannum.
+4. Merchant Account Management	Merchant acquiring account maintain pannum.
+5. Clearing	Issuing bank-lendhu amount collect panni settlement-ku prepare pannum.
+6. Refund Processing	Merchant refund initiate pannina customer account-ku amount anuppa process pannum.
+7. Chargeback Handling	Customer dispute pannina chargeback process handle pannum.
+8. Fraud & Risk Monitoring	Suspicious card transactions monitor pannum, fraud reduce panna rules apply pannum.
+9. PCI DSS Compliance	Card payment security standards follow pannuradhu.
+10. Reporting	Transaction reports, settlement reports, reconciliation reports generate pannum.
+
+Customer
+    ↓
+Select Product
+    ↓
+Checkout
+    ↓
+Select Credit/Debit Card
+    ↓
+Enter Card Details
+(Card Number, Expiry, CVV)
+    ↓
+Novalnet validates and encrypts the card details
+    ↓
+Fraud Checks (Luhn, BIN, Blacklist, etc.)
+    ↓
+Acquirer
+    ↓
+Card Network (Visa/Mastercard)
+    ↓
+Issuing Bank
+    ↓
+Approve / Decline
+    ↓
+Card Network
+    ↓
+Acquirer
+    ↓
+Novalnet
+    ↓
+WooCommerce Order Updated
+    ↓
+Merchant Ships Product
+    ↓
+Settlement
