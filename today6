@@ -1,0 +1,638 @@
+Step 1
+Customer selects a product.
+
+Example:
+Laptop = ₹50,000
+
+↓
+
+Step 2
+Customer proceeds to Checkout.
+
+↓
+
+Step 3
+Customer selects
+Credit/Debit Card
+
+↓
+
+Step 4
+Customer enters
+• Card Number
+• Expiry Date
+• CVV
+• Card Holder Name
+
+↓
+
+Step 5
+Customer clicks
+"Place Order"
+
+↓
+
+Step 6
+Merchant website/plugin sends an API request to the Novalnet server.
+
+The request contains:
+• Merchant ID
+• Authentication Signature
+• Amount
+• Currency
+• Order Number
+• Customer Details
+• Billing Address
+• Payment Type
+• Card Token/Card Data
+• Callback URL
+• Other required parameters
+
+↓
+
+Step 7
+Novalnet receives the API request.
+
+↓
+
+Step 8
+Novalnet validates the basic request.
+
+Checks include:
+• Merchant ID is valid.
+• Signature/Auth token is valid.
+• Required parameters are present.
+• Amount is valid.
+• Currency is supported.
+• Payment method is enabled.
+• Request format is correct.
+
+If any check fails → API returns an error.
+
+↓
+
+Step 9
+Novalnet generates a unique Transaction ID (TID).
+
+Example:
+TID = 325874612398
+
+↓
+
+Step 10
+Novalnet performs fraud and risk checks.
+
+Examples:
+• BIN Country Check
+• IP Country Check
+• Address Verification
+• Velocity Check
+• Blacklist Check
+• Email Validation
+• Device Fingerprinting
+• Card Expiry Check
+• CVV Check
+• 3D Secure Decision
+• Customer Risk Score
+
+If risk is high:
+→ Decline or send for 3D Secure/manual review.
+
+↓
+
+Step 11
+If risk checks pass,
+Novalnet forwards the authorization request to the Acquirer.
+
+↓
+
+Step 12
+Acquirer performs its own validations.
+
+Examples:
+• Merchant account active
+• Merchant allowed to accept this card
+• Transaction amount limits
+• Card network available
+• Compliance checks
+
+↓
+
+Step 13
+Acquirer forwards the request to the Card Network.
+
+Example:
+Visa or Mastercard
+
+↓
+
+Step 14
+Card Network identifies the correct Issuing Bank using the card BIN and routes the transaction.
+
+↓
+
+Step 15
+Issuing Bank performs authorization checks.
+
+Examples:
+• Card exists
+• Card is active
+• Card not expired
+• CVV correct
+• Sufficient balance/credit limit
+• Card not blocked
+• Fraud monitoring
+• Daily transaction limit
+• OTP / 3D Secure authentication (if required)
+
+↓
+
+Step 16
+Issuing Bank sends the result.
+
+Approved
+or
+Declined
+
+↓
+
+Step 17
+Card Network forwards the response to the Acquirer.
+
+↓
+
+Step 18
+Acquirer forwards the response to Novalnet.
+
+↓
+
+Step 19
+Novalnet updates the transaction status.
+
+Examples:
+• SUCCESS
+• FAILURE
+• PENDING
+• ON HOLD
+
+↓
+
+Step 20
+Novalnet sends the API response back to the Merchant.
+
+The response contains:
+• Transaction Status
+• TID
+• Authorization Code
+• Payment Result
+• Response Code
+• Response Message
+
+↓
+
+Step 21
+Merchant updates the order.
+
+If Approved:
+• Order = Confirmed
+• Stock reduced
+• Confirmation email sent
+• Product shipped
+
+If Declined:
+• Order = Failed
+• Customer sees the error message
+
+↓
+
+Step 22
+Settlement (after authorization)
+
+Issuing Bank
+→ Card Network
+→ Acquirer
+→ Novalnet (if applicable)
+→ Merchant Bank Account
+
+Money is transferred according to the settlement cycle (e.g., T+1, T+2).
+invoice:
+Step 1
+Customer selects a product.
+
+↓
+
+Step 2
+Customer goes to Checkout.
+
+↓
+
+Step 3
+Customer selects
+Invoice Payment (Buy Now, Pay Later)
+
+↓
+
+Step 4
+Customer enters billing details.
+
+↓
+
+Step 5
+Customer clicks
+"Place Order"
+
+↓
+
+Step 6
+Merchant sends an API request to Novalnet.
+
+Request contains:
+• Merchant ID
+• Authentication Signature
+• Amount
+• Currency
+• Customer Details
+• Billing Address
+• Order Number
+• Payment Type = Invoice
+
+↓
+
+Step 7
+Novalnet receives the request.
+
+↓
+
+Step 8
+Novalnet validates basic parameters.
+
+Checks:
+• Merchant authentication
+• Required parameters
+• Payment method enabled
+• Amount & currency
+• Customer details
+
+↓
+
+Step 9
+Novalnet generates a unique TID.
+
+↓
+
+Step 10
+Novalnet performs invoice risk checks.
+
+Examples:
+• Creditworthiness check
+• Address verification
+• Identity verification
+• Blacklist check
+• Fraud detection
+• Duplicate transaction check
+• Order amount limits
+• Country eligibility
+
+If risk is high:
+→ Decline or put the transaction On Hold.
+
+↓
+
+Step 11
+If approved,
+Novalnet creates the invoice payment transaction.
+
+↓
+
+Step 12
+Novalnet returns a successful API response.
+
+Response includes:
+• TID
+• Payment Status
+• Invoice Number (if applicable)
+• Bank Account Details
+• Payment Reference
+• Due Date
+
+↓
+
+Step 13
+Merchant confirms the order.
+
+↓
+
+Step 14
+Merchant ships the product.
+
+↓
+
+Step 15
+Customer receives the invoice.
+
+↓
+
+Step 16
+Customer pays the invoice before the due date.
+
+↓
+
+Step 17
+Novalnet receives the payment,
+matches it using the payment reference,
+and updates the transaction.
+
+↓
+
+Step 18
+Merchant receives the money.
+prepayment:
+Step 1
+Customer selects a product.
+
+↓
+
+Step 2
+Checkout page.
+
+↓
+
+Step 3
+Customer selects
+Prepayment.
+
+↓
+
+Step 4
+Customer clicks
+"Place Order"
+
+↓
+
+Step 5
+Merchant sends API request to Novalnet.
+
+↓
+
+Step 6
+Novalnet validates:
+• Merchant credentials
+• Required parameters
+• Amount
+• Currency
+• Payment method
+
+↓
+
+Step 7
+Novalnet generates a TID.
+
+↓
+
+Step 8
+Novalnet creates a prepayment transaction.
+
+↓
+
+Step 9
+Novalnet returns:
+• TID
+• Payment Instructions
+• Bank Account Details
+• Payment Reference
+• IBAN/BIC (where applicable)
+
+↓
+
+Step 10
+Merchant shows the payment instructions to the customer.
+
+↓
+
+Step 11
+Customer transfers the money using bank transfer.
+
+↓
+
+Step 12
+Novalnet receives the bank transfer.
+
+↓
+
+Step 13
+Novalnet matches the payment reference with the TID.
+
+↓
+
+Step 14
+Payment status changes from
+Pending → Confirmed.
+
+↓
+
+Step 15
+Merchant receives payment confirmation.
+
+↓
+
+Step 16
+Merchant ships the product.
+
+direct sepa:
+Step 1
+Customer selects a product.
+
+↓
+
+Step 2
+Checkout page.
+
+↓
+
+Step 3
+Customer selects
+SEPA Direct Debit.
+
+↓
+
+Step 4
+Customer enters:
+• IBAN
+• Account Holder Name
+
+↓
+
+Step 5
+Customer accepts the SEPA Mandate
+(authorizes the merchant to debit the account).
+
+↓
+
+Step 6
+Customer clicks
+"Place Order"
+
+↓
+
+Step 7
+Merchant sends API request to Novalnet.
+
+Request contains:
+• Merchant ID
+• Amount
+• Currency
+• Customer Details
+• IBAN
+• Mandate Information
+• Payment Type = SEPA Direct Debit
+
+↓
+
+Step 8
+Novalnet validates:
+• Merchant authentication
+• Required parameters
+• IBAN format
+• Country support
+• Payment method
+• Amount
+
+↓
+
+Step 9
+Novalnet generates a TID.
+
+↓
+
+Step 10
+Novalnet performs SEPA risk checks.
+
+Examples:
+• IBAN validation
+• Blacklist check
+• Duplicate transaction check
+• Fraud detection
+• Customer verification
+• Country eligibility
+
+↓
+
+Step 11
+Novalnet creates the SEPA Direct Debit transaction.
+
+↓
+
+Step 12
+Novalnet submits the debit request through the banking network.
+
+↓
+
+Step 13
+Customer's bank checks:
+• IBAN exists
+• Account is active
+• Sufficient funds
+• Valid SEPA mandate
+• No debit restrictions
+
+↓
+
+Step 14
+Customer's bank:
+• Approves → Amount is debited.
+OR
+• Rejects → Payment fails (e.g., insufficient funds, invalid account, revoked mandate).
+
+↓
+
+Step 15
+Novalnet receives the bank response.
+
+↓
+
+Step 16
+Novalnet updates the transaction status.
+
+• SUCCESS
+• PENDING
+• FAILED
+
+↓
+
+Step 17
+Merchant receives the API/callback notification.
+
+↓
+
+Step 18
+If successful,
+Merchant confirms the order and ships the product.
+
+charge back:
+Step 1
+Customer makes a card payment.
+
+↓
+
+Step 2
+Merchant receives the payment and ships the product.
+
+↓
+
+Step 3
+Customer disputes the transaction.
+
+Reasons:
+• Unauthorized transaction
+• Product not received
+• Product defective
+• Duplicate charge
+• Fraud
+
+↓
+
+Step 4
+Customer contacts the Issuing Bank.
+
+↓
+
+Step 5
+Issuing Bank reviews the complaint.
+
+↓
+
+Step 6
+Issuing Bank sends a chargeback request through the Card Network (Visa/Mastercard).
+
+↓
+
+Step 7
+Card Network forwards the chargeback to the Acquirer.
+
+↓
+
+Step 8
+Acquirer informs Novalnet and the Merchant.
+
+↓
+
+Step 9
+Merchant provides evidence.
+
+Examples:
+• Delivery proof
+• Invoice
+• Tracking number
+• Customer communication
+• Signed receipt
+
+↓
+
+Step 10
+Decision
+
+If merchant wins:
+→ Chargeback is reversed and the merchant keeps the money.
+
+If customer wins:
+→ Money is returned to the customer, and the merchant loses the payment (and may also pay a chargeback fee).
