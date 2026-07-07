@@ -1,0 +1,49 @@
+credit card:
+The end customer/user selects the product and adds the selected product to the cart. And proceed to checkout.
+If it’s registered customers, they enter their login credentials and click login.
+Enter the billing and shipping address if needed.
+If it’s guest customers, they need to enter their billing and shipping address.
+Once they select the Card payment type, the form will get loaded in the shop.
+Once they click the Pay button after entering their card details like CC No, CC Expiry Month & Date and CVV.
+Payment request call with PAN hash and unique ID parameters will be reached to Novalnet.
+From the shop, parameters were formed and sent a request to Novalnet.
+Once the request is received from the shop, Novalnet will check the mandatory parameters; once all the mandatory parameters from the request are valid, TID (Transaction ID) will get generated.
+If the requests are invalid, TID will generate a respective error message and redirect to the shop checkout/payment page.
+Once TID is generated with a valid request, Novalnet will execute the fraud checks one by one based on the fraud module enabled by the merchant in the admin portal.
+Enabled fraud module checks get completed. After that, the Novalnet server will send a response with transaction details.
+All checks completed in Novalnet, the request will be sent to Acquirer with raw payment
+data (CC number, CC expiry month & date and CVV) with amount of the order.
+Once acquirers check the card details, the request will be sent to the card network/scheme.
+Card network will identify the issuing bank and card network request to the issuing bank with card details
+Issuing bank will check the available amount with card details and debit amount. And send the notification to the customer.
+In the meantime, Issuing bank will respond successfully to the card network, and the card network will respond to the acquirers and send the response to Novalnet (PSP), and Novalnet will send the request to the shop.
+
+prepayment:
+The end customer/user selects the product and adds the selected product to the cart. And proceed to checkout.
+If it’s registered customers, they enter their login credentials and click login.
+Enter the billing and shipping address if needed.
+If it’s guest customers, they need to enter their billing and shipping address
+They select the Invoice / Prepayment payment type and click the pay button.
+From the shop, parameters were formed and sent a request to the Novalnet server (PSP).
+Once the request is received from the shop, Novalnet will check the mandatory parameters; once all the mandatory parameters from the request are valid, TID (Transaction ID) will get generated.
+If the requests are invalid, TID will generate a respective error message and redirect to the shop checkout/payment page.
+Once TID is generated with a valid request, Novalnet will execute the fraud checks one by one based on the fraud module enabled by the merchant in the admin portal.
+Enabled fraud module checks get completed. After that, the Novalnet server will send a response with transaction details, bank details, the payment due date, and payment reference to the shop.
+If any one of fraud checks fails, redirects to the shop checkout/payment page with respective error messages.
+
+direct debit sepa:
+The end customer/user selects the product and adds the selected product to the cart. And proceed to checkout.
+If it’s registered customers, they enter their login credentials and click login.
+Enter the billing and shipping address if needed.
+If it’s guest customers, they need to enter their billing and shipping address.
+Once, they select the Direct Debit SEPA payment type. Then the account holder name and IBAN should be entered. Then click the pay button.
+From the shop, parameters were formed and sent a request to the Novalnet server (PSP).
+Once the request from the shop, Novalnet will check the mandatory parameters; once all the mandatory parameters from the request are valid, TID (Transaction ID) will be generated.
+If the requests are invalid, TID will generate a respective error message and redirect to the shop checkout/payment page.
+Once TID is generated with a valid request, Novalnet will execute the fraud checks one by one based on the fraud module enabled by the merchant in the admin portal.
+Enabled fraud module checks get completed. After that, the Novalnet server will send a
+response with transaction details.
+Novalnet collects all successful transactions at the end of the day with details of end customer IBAN and product amount in XML file format.
+The next day, Novalnet submits the XML file containing the end customer’s IBAN and transaction details to the Novalnet bank.
+Based on the payment due date, Novalent bank initiates the payment request call to the respective end customer issuing bank and debits the amount from the end customer account.
+Once the amount is debited, in the meantime the end customer will get notified from the end customer issuing bank.
