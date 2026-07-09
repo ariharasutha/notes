@@ -1,0 +1,183 @@
+product active key
+payment access key
+tariff id
+
+important
+charge back direct payment,redirect payment
+checksum
+callback
+pandata
+panhash
+
+
+
+auto configuration call payload
+
+novalnet_api_key
+7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+novalnet_key_password
+a87ff679a2f3e71d9181a67b7542122c
+nn_nonce
+ac84380217
+action
+get_novalnet_vendor_details
+
+auto configuration call response
+
+{
+    "success": true,
+    "data": {
+        "merchant": {
+            "auth_code": "JyEtHUjjbHNJwVztW6JrafIMHQvici",
+            "client_key": "88fcbbceb1948c8ae106c3fe2ccffc12",
+            "hook_url": "https:\/\/sandboxextapi.novalnet.de\/bigcommerce\/webhook\/novalnet\/81evmohfdr",
+            "payment_types": [
+                "ALIPAY",
+                "APPLEPAY",
+                "BANCOMATPAY",
+                "BANCONTACT",
+                "BIZUM",
+                "BLIK",
+                "BOLETO",
+                "CREDITCARD",
+                "DIRECT_DEBIT_ACH",
+                "DIRECT_DEBIT_SEPA",
+                "DIRECT_DEBIT_SEPA_SIGNED",
+                "EPC_QRPAY",
+                "EPS",
+                "GOOGLEPAY",
+                "GUARANTEED_DIRECT_DEBIT_SEPA",
+                "GUARANTEED_INVOICE",
+                "IDEAL",
+                "INSTALMENT_DIRECT_DEBIT_SEPA",
+                "INSTALMENT_DIRECT_DEBIT_SEPA_WITH_RATE",
+                "INSTALMENT_INVOICE",
+                "INSTALMENT_INVOICE_WITH_RATE",
+                "INVOICE",
+                "PREPAYMENT",
+                "KAKAOPAY",
+                "MBWAY",
+                "MULTIBANCO",
+                "NAVERPAY",
+                "ONLINE_BANK_TRANSFER",
+                "ONLINE_TRANSFER",
+                "PAYCONIQ",
+                "PAYPAL",
+                "PIX",
+                "POSTFINANCE",
+                "POSTFINANCE_CARD",
+                "PRZELEWY24",
+                "SAMSUNGPAY",
+                "SEPA_CREDIT",
+                "TRUSTLY",
+                "TWINT",
+                "WECHATPAY"
+            ],
+            "project": 6120,
+            "tariff": {
+                "10003": {
+                    "name": "ONE TIME PAY WITH STORED TARIFF",
+                    "type": 3
+                },
+                "10004": {
+                    "name": "ONE TIME PAY WITH PASSED AMOUNT",
+                    "type": 2
+                },
+                "10005": {
+                    "name": "PRE-DEFINED SUBSCRIPTION",
+                    "type": 1
+                },
+                "10006": {
+                    "name": "DYNAMIC SUBSCRIPTION",
+                    "type": 4
+                },
+                "11032": {
+                    "name": "11032",
+                    "type": 1
+                },
+                "11037": {
+                    "name": "11037",
+                    "type": 4
+                },
+                "11185": {
+                    "name": "TEST TARIFF",
+                    "type": 2
+                },
+                "11989": {
+                    "name": "PREDEFINED TARIFF FOR SUBSCRIPTION",
+                    "type": 1
+                },
+                "11990": {
+                    "name": "DYNAMIC TARIFF FOR SUBSCRIPTION",
+                    "type": 4
+                },
+                "14541": {
+                    "name": "Vordefinierte Abonnements",
+                    "type": 1
+                },
+                "14542": {
+                    "name": "Vordefiniertes Abonnement",
+                    "type": 1
+                },
+                "14543": {
+                    "name": "Dynamisches Abonnement",
+                    "type": 4
+                },
+                "15637": {
+                    "name": "test_Minghan",
+                    "type": 3
+                },
+                "15698": {
+                    "name": "Subscription",
+                    "type": 1
+                },
+                "15699": {
+                    "name": "Subscription-2",
+                    "type": 1
+                },
+                "15700": {
+                    "name": "PRE SUB",
+                    "type": 1
+                },
+                "15701": {
+                    "name": "testing_woo",
+                    "type": 4
+                },
+                "15702": {
+                    "name": "test_dynamic",
+                    "type": 4
+                },
+                "15703": {
+                    "name": "stored",
+                    "type": 3
+                },
+                "15718": {
+                    "name": "ONE TIME WITH ASSIGNED AMOUNT",
+                    "type": 2
+                },
+                "15929": {
+                    "name": "one",
+                    "type": 3
+                },
+                "16053": {
+                    "name": "USD TEST",
+                    "type": 2
+                },
+                "16188": {
+                    "name": "test",
+                    "type": 4
+                }
+            },
+            "test_mode": 1,
+            "vendor": 4
+        },
+        "result": {
+            "status": "SUCCESS",
+            "status_code": 100,
+            "status_text": "successful"
+        }
+    }
+}
+
+
+
