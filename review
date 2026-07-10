@@ -1,0 +1,106 @@
+1.ecommerce&types:
+2.shop system &Typesof Shop system:
+ Products&types
+ simple 
+ bundle
+ virtual
+ veriable
+ Coupons&types->fixed product discount,fixed cart discount,percentage discount.
+ Shipping&types
+   .free shipping
+   .flate rate shipping
+   .local pickup
+   
+ Tax&types
+  .direct tax
+  .indirect tax
+  .shop work -inclusive-exclusive
+  .shop system-zero rate,standard rate,redues rate
+////////////////////////////////////////////////////////
+ Order Flow
+3.NovalnetAG services:
+ 1.Payment Processing
+ 2.Risk Management and types
+ 3.Marketplace & Affiliates
+ 4.Debt Collection
+ 5.Subscription Management
+ 6.Escrow Account
+ 7.Automated Invoice
+ 8.MOTO/Pay-by-link-payment via telephone,payment via link byemail,accepted payment data by phone call or email
+ 9.Analytics & Reporting
+ 10.End-customer Support-live chat,phone,email,social media,selef service option,tools:crm integration,customer support softwer,analytic and report
+ 11.Implementation & Maintenance
+ 
+ /////////////////////////////////////////////////////////
+4.Direct Payments/flow-setting
+  invoice
+  prepayment
+  credit&debit card payment
+  direct debit sepa
+5.Redirect Payments/flow setting
+    paypal
+6.chargeback
+7.return debit
+8.debt collection
+9.reversal
+10.webhook&callback
+11.novalnet global configuration
+   product activekey-merchant id-authcode-product id
+   payment accesskey
+   tariff id-one time pay with stored tariff-one time pay with assign amount-dynamic,predefind subscripition
+12.checksum
+13.acquirer
+14.cardnetwork
+15.issuing bank
+16.novalnet e solution
+Creation all types in the local shop (WooCommerce)
+Explained about basic flow for the payment methods (end customer view
+Shop installation steps
+10.cod payment analyzation
+//////////////////////
+1.escrow account:
+these accounts are mandated to be used by PSPs by the German financial regulator, BaFin. 
+In compliance, Novalnet AG operates and maintains escrow accounts for its internal uses and merchants as required.
+how to work escrow account our ecommerce website
+
+2.analytics and report:
+We use the extensive data available in your admin dashboard to develop in-depth business insights.
+Traffic Sources: Understand where your visitors are coming from (organic search, paid ads, social media, etc.).
+Conversion Rate: Measure the percentage of visitors who complete a desired action (such as making a purchase).
+Average Order Value (AOV): The average amount customers spend per transaction.
+Customer Lifetime Value (CLV): Predicts the total revenue a customer will generate during their relationship with your business.
+analytics for tool
+ google analytics
+ ecommerce platform
+ heatmaping session record
+report:
+
+implemetation and maintanace:
+ 1 key feature implementation:
+  product catlog
+  shopping cart/checkout
+  customer account
+2 securtiey assure:
+   ssl certificate
+   payment gatway securtity
+   regulare updatea
+3 testing:
+  funtionality
+  compatapility
+  performance 
+4 deployment:
+   softlanch
+   domain and hosting setup
+5.maintenance
+  technical suport
+  cms
+  backup and security check
+6.performance optimation
+   anlaytic integration
+   seo optimi
+   conversion rate optimize
+   
+
+
+
+
