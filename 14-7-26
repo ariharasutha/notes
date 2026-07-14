@@ -1,4 +1,29 @@
- Redirect Payment Flow (Example: PayPal)
+supports over 150 payment methods through APIs, SDKs, and plugins for platforms like WooCommerce, Magento, Shopify, and Shopware."**
+Leadership Team (Management)
+Position
+Name
+CEO
+Gabriel Dixon
+CFO
+Johnson Rajdaniel
+COO
+Emmanuel Kirse
+CTO
+Holger Bosk
+CSO
+Christoph Drewes
+CMO
+Antony Robinson
+CBDO
+Jose Augustine
+Director (UK)
+Douglas Cruz
+Security
+PCI DSS Level 1 Compliance
+Risk & Fraud Detection
+Tokenization
+Encryption
+Redirect Payment Flow (Example: PayPal)
 
 1. The customer selects a product and adds it to the cart.
 2. The customer proceeds to the checkout page.
