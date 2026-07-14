@@ -1,0 +1,164 @@
+ Redirect Payment Flow (Example: PayPal)
+
+1. The customer selects a product and adds it to the cart.
+2. The customer proceeds to the checkout page.
+3. The customer enters the required details, such as name, email address, billing address, and shipping address.
+4. The customer selects a redirect payment method (for example, PayPal) and clicks **Place Order**.
+5. The merchant shop sends a payment request, along with the **Return URL** and **Error URL**, to the Novalnet server.
+6. The Novalnet server receives the request and performs basic parameter validation.
+7. If the request is valid, the Novalnet server generates a **Transaction ID (TID)**.
+8. The Novalnet server executes the enabled fraud checks based on the merchant's fraud module configuration.
+9. If all validations are successful, the Novalnet server sends a response containing the **Redirect URL** to the merchant shop.
+10. The merchant shop redirects the customer to the third-party payment provider's page (for example, PayPal).
+11. The customer completes the payment on the third-party payment provider's page.
+12. After the payment is completed, the third-party payment provider sends the payment result to the Novalnet server.
+13. The Novalnet server processes the payment response, generates a **checksum** using the **Transaction ID (TID), status, payment access key, and transaction secret**, and prepares the transaction response.
+14. The Novalnet server sends the transaction response to the merchant shop with details such as **TID, status, payment access key, transaction secret, and checksum**.
+15. The merchant shop generates its own checksum using the **shop data** (**TID, status, payment access key, and transaction secret**) and compares it with the checksum received from the Novalnet server.
+16. If both checksums match, the merchant shop confirms that the response is authentic and has not been modified.
+17. The merchant shop requests the complete transaction details from the Novalnet server using the **Transaction ID (TID)**.
+18. The Novalnet server returns the final transaction details.
+19. The merchant shop updates the order status.
+20. Finally, the customer is redirected to the **Order Success** page, and the order is marked as completed.
+
+
+
+
+
+
+
+
+
+check email validation
+
+PHP validates the email on the merchant side before sending the payment request. However, merchant-side validation can be bypassed by using tools like Postman or by sending a direct API request. Therefore, Novalnet performs its own server-side email validation to ensure that the request contains a valid email format before processing the payment. This provides an additional layer of security and data validation.
+
+Short Interview Answer
+
+"PHP performs email validation on the merchant side, but it can be bypassed. Therefore, Novalnet performs server-side email validation to ensure that the email format is valid before processing the payment."
+
+checksum:
+"A checksum is used to verify that the payment response is genuine and has not been modified during transmission. TIn Novalnet, Tariff means a configuration or rule set that defines how payments are processed for a merchant project. Each tariff has a unique Tariff ID. A merchant can create multiple tariffs for different business requirements.
+
+
+
+
+
+What is Tariff ID?
+Tariff ID = Unique identification number for a tariff.
+It is linked to a Project ID.
+One project can have multiple tariffs.
+The payment plugin or API sends the Tariff ID to Novalnet during payment processing.
+Logical Working Flow
+Merchant creates Project
+        │
+        ▼
+Create Tariff
+        │
+        ▼
+Novalnet generates Tariff ID
+        │
+        ▼
+Merchant configures Tariff ID
+(in WooCommerce / Magento / API)
+        │
+        ▼
+Customer places order
+        │
+        ▼
+Shop sends payment request
+        │
+Merchant ID
+Project ID
+Tariff ID
+Payment Data
+        │
+        ▼
+Novalnet reads Tariff
+        │
+        ▼
+Applies tariff rules
+        │
+• Which payment methods are allowed?
+• Authorization or Capture?
+• Risk/Fraud checks
+• Settlement configuration
+• Country restrictions
+• Currency settings
+        │
+        ▼
+Payment Processed
+        │
+        ▼
+Response sent to Shop
+Example
+
+Suppose a merchant has one online store but two business models.
+
+Tariff 1 – Retail Customers
+Credit Card
+PayPal
+Invoice
+Authorization Mode
+
+Tariff ID = 1001
+
+Tariff 2 – Subscription Customers
+Credit Card
+SEPA Direct Debit
+Recurring Payments
+Subscription Enabled
+
+Tariff ID = 1002
+
+When a payment request contains Tariff ID = 1002, Novalnet automatically applies the subscription payment rules instead of the retail rules.
+
+Why is Tariff Used?
+
+A tariff allows the merchant to:
+
+Configure different payment rules.
+Enable or disable payment methods.
+Apply different risk management settings.
+Configure settlement and billing behavior.
+Manage multiple business models using the same merchant accounthe merchant shop generates its own checksum using the transaction data and compares it with the checksum received from the Novalnet server. If both checksums match, the response is authentic and the payment can be processed safely."
+
+**Why is checksum used for redirect payments but not for direct payments?** In **redirect payments**,
+the customer is redirected from the merchant website to the payment provider's page and then back to the merchant website.
+Since the data passes through the customer's browser, there is a possibility that it could be modified. Therefore, a **checksum** is used to verify that the returned data has not been changed and is authentic.
+webhook and callback
+Webhook	Callback
+A webhook is a server-to-server HTTP notification.	A callback is a general term for a response or notification sent after an event.
+It is sent automatically when a specific event occurs (payment success, refund, chargeback, etc.).	It is a broader concept and can be used in programming or payment systems.
+The notification is sent to the merchant's Webhook URL.	The notification is sent to the merchant's Callback URL.
+Used to update the merchant shop automatically.	Used to notify the merchant about the payment result.
+In Novalnet
+
+In Novalnet, Webhook and Callback are often used interchangeably.
+
+Webhook URL / Callback URL → The endpoint (URL) on the merchant shop.
+Webhook / Callback → The server-to-server HTTP POST request sent by the Novalnet server to that URL.
+Flow
+Customer
+    │
+    ▼
+Merchant Shop
+    │
+    ▼
+Novalnet Server
+    │
+    ▼
+Payment Provider / Bank
+    │
+    ▼
+Novalnet Server
+    │
+    ▼
+Webhook / Callback URL (Merchant Shop)
+    │
+    ▼
+Merchant Shop updates the order status
+Interview Answer
+
+"A webhook is a server-to-server HTTP notification sent automatically when a payment event occurs. A callback is a general term for a notification or response after an event. In Novalnet, the terms webhook and callback are commonly used interchangeably.
+Both are used to send payment status updates from the Novalnet server to the merchant shop."
