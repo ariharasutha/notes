@@ -1,3 +1,6 @@
+Data Integrity – The transaction data was not modified during transmission.
+Data Authenticity – The data really came from the expected sender (for example, the Novalnet server).
+Security – Prevents attackers from changing important values like the amount, order ID, or payment status.
 supports over 150 payment methods through APIs, SDKs, and plugins for platforms like WooCommerce, Magento, Shopify, and Shopware."**
 Leadership Team (Management)
 Position
