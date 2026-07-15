@@ -1,3 +1,4 @@
+It is used to verify that the data has not been changed and that it comes from a trusted source.
 Data Integrity – The transaction data was not modified during transmission.
 Data Authenticity – The data really came from the expected sender (for example, the Novalnet server).
 Security – Prevents attackers from changing important values like the amount, order ID, or payment status.
