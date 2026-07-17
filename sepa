@@ -1,0 +1,259 @@
+direct debit seb:
+
+
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => DIRECT_DEBIT_SEPA
+            [test_mode] => 0
+            [amount] => 1416
+            [currency] => EUR
+            [order_no] => 205
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.1-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+            [create_token] => 1
+            [payment_data] => Array
+                (
+                    [account_holder] => Prem kumar
+                    [iban] => DE24 3002 0900 2411 7619 56
+                )
+
+        )
+
+    [customer] => Array
+        (
+            [first_name] => Prem
+            [last_name] => kumar
+            [email] => premkumar_v@novalnetsolutions.com
+            [tel] => +917448520507
+            [customer_ip] => 192.168.2.125
+            [customer_no] => 2
+            [billing] => Array
+                (
+                    [street] => 124 kk nagar 
+                    [city] => chennai
+                    [zip] => 600123
+                    [country_code] => IN
+                    [state] => Tamil Nadu
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 205
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 205
+            [nn_order_id] => 205
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => chennai
+                    [company] => ABC GmbH
+                    [country_code] => IN
+                    [house_no] => 124
+                    [state] => Tamil Nadu
+                    [street] => kk nagar
+                    [zip] => 600123
+                )
+
+            [birth_date] => 1960-09-06
+            [customer_ip] => 192.168.2.125
+            [customer_no] => 2
+            [email] => premkumar_v@novalnetsolutions.com
+            [first_name] => Prem
+            [gender] => f
+            [last_name] => kumar
+            [tel] => +917448520507
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 1416
+            [currency] => EUR
+            [date] => 2026-07-15 12:43:19
+            [debit_reason_1] => TID 15415900083812551
+            [debit_reason_2] => developer.novalnet.de
+            [due_date] => 2026-07-20
+            [order_no] => 205
+            [payment_data] => Array
+                (
+                    [account_holder] => Prem kumar
+                    [iban] => DE2XXXXXXXXXXXXXX956
+                    [token] => R02cB22w22w00a02c-R22w22w22wNJV-V14oDN10k04eB18sB22wBTN04eP12mJ1
+                )
+
+            [payment_type] => DIRECT_DEBIT_SEPA
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15415900083812551
+        )
+
+)
+////////////////////////////////
+
+ ======================
+===============================================================
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [test_mode] => 1
+            [amount] => 1300
+            [currency] => EUR
+            [order_no] => 352
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.1-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+            [payment_data] => Array
+                (
+                    [account_holder] => test t
+                    [iban] => DE24 3002 0900 2411 7619 56
+                )
+
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => t
+            [email] => madhu@gmail.com
+            [tel] => 6746666687
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 352
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 352
+            [nn_order_id] => 352
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => -
+                    [state] => Berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => madhu@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => t
+            [tel] => 6746666687
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 1300
+            [currency] => EUR
+            [date] => 2026-07-17 11:24:07
+            [debit_reason_1] => TID 15416100036411903
+            [debit_reason_2] => developer.novalnet.de
+            [due_date] => 2026-07-22
+            [order_no] => 352
+            [payment_data] => Array
+                (
+                    [account_holder] => test t
+                    [bic] => CMCIDEDDXXX
+                    [iban] => DE2XXXXXXXXXXXXXX956
+                )
+
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15416100036411903
+        )
+
+)
