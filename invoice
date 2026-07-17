@@ -1,0 +1,244 @@
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => INVOICE
+            [test_mode] => 0
+            [amount] => 1300
+            [currency] => EUR
+            [order_no] => 194
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.1-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => t
+            [email] => test@gmail.com
+            [tel] => 6746666687
+            [customer_ip] => 192.168.2.123
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 194
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 194
+            [nn_order_id] => 194
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [company] => ABC GmbH
+                    [country_code] => DE
+                    [house_no] => -
+                    [state] => Berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1972-06-19
+            [customer_ip] => 192.168.2.123
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => t
+            [tel] => 6746666687
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 1300
+            [bank_details] => Array
+                (
+                    [account_holder] => Novalnet AG
+                    [bank_name] => Raiffeisenlandesbank OÃ– Zndl SÃ¼ddeutschland
+                    [bank_place] => Passau
+                    [bic] => RZOODE77050
+                    [iban] => DE13740201500003119724
+                    [qr_image] => https://nnt.ag/epcqr/15415900069424171.png
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-15 09:55:08
+            [due_date] => 2026-07-29
+            [invoice_ref] => BNR-6120-194
+            [order_no] => 194
+            [payment_type] => INVOICE
+            [status] => PENDING
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15415900069424171
+        )
+
+)
+//////////////////////////////////////////////////////////////////////
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_INVOICE
+            [test_mode] => 1
+            [amount] => 2300
+            [currency] => EUR
+            [order_no] => 402
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.1-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+        )
+
+    [customer] => Array
+        (
+            [first_name] => Max
+            [last_name] => Mustermann
+            [email] => premkumar_v@novalnetsolutions.com
+            [tel] => +49 (0)89 123456
+            [customer_ip] => 192.168.2.125
+            [customer_no] => 2
+            [billing] => Array
+                (
+                    [street] => 2,Musterstr 
+                    [city] => Musterhausen
+                    [zip] => 12345
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 402
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 402
+            [nn_order_id] => 402
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => Musterhausen
+                    [country_code] => DE
+                    [house_no] => 2
+                    [state] => Berlin
+                    [street] => Musterstr
+                    [zip] => 12345
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.125
+            [customer_no] => 2
+            [email] => premkumar_v@novalnetsolutions.com
+            [first_name] => Max
+            [gender] => u
+            [last_name] => Mustermann
+            [tel] => +49 (0)89 123456
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 2300
+            [bank_details] => Array
+                (
+                    [account_holder] => Novalnet AG
+                    [bank_name] => Raiffeisenlandesbank OÃ– Zndl SÃ¼ddeutschland
+                    [bank_place] => Passau
+                    [bic] => RZOODE77050
+                    [iban] => DE13740201500003119724
+                    [qr_image] => https://nnt.ag/epcqr/15416100039617821.png
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-17 12:23:01
+            [due_date] => 2026-07-31
+            [invoice_ref] => BNR-6120-402
+            [order_no] => 402
+            [payment_type] => GUARANTEED_INVOICE
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15416100039617821
+        )
+
+)
