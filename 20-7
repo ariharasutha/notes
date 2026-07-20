@@ -1,0 +1,1148 @@
+guranteed invoice:
+
+===================== 2026-07-20 11:37
+:56
+ ======================
+===============================================================
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_INVOICE
+            [test_mode] => 0
+            [amount] => 2300
+            [currency] => EUR
+            [order_no] => 670
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 670
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 670
+            [nn_order_id] => 670
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => -
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 2300
+            [bank_details] => Array
+                (
+                    [account_holder] => Novalnet AG
+                    [bank_name] => Raiffeisenlandesbank OÃ– Zndl SÃ¼ddeutschland
+                    [bank_place] => Passau
+                    [bic] => RZOODE77050
+                    [iban] => DE13740201500003119724
+                    [qr_image] => https://nnt.ag/epcqr/15416400067509992.png
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-20 13:37:56
+            [due_date] => 2026-08-03
+            [invoice_ref] => BNR-6120-670
+            [order_no] => 670
+            [payment_type] => GUARANTEED_INVOICE
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15416400067509992
+        )
+
+)///////////////////////////////////////////////////////////////////////////////////////////////
+
+ payment action authorize:
+ 
+ ===============================================================
+https://payport.novalnet.de/v2/authorize
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_INVOICE
+            [test_mode] => 1
+            [amount] => 2300
+            [currency] => EUR
+            [order_no] => 679
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [first_name] => test
+                    [last_name] => m
+                    [tel] => 7696676686
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 679
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 679
+            [nn_order_id] => 679
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => -
+                    [state] => Berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [shipping] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [first_name] => test
+                    [house_no] => -
+                    [last_name] => m
+                    [street] => berlin 
+                    [tel] => 7696676686
+                    [zip] => 66862
+                )
+
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 2300
+            [authorization] => Array
+                (
+                    [auto_action] => CAPTURE
+                    [expiry_date] => 2026-08-02
+                )
+
+            [bank_details] => Array
+                (
+                    [account_holder] => Novalnet AG
+                    [bank_name] => Raiffeisenlandesbank OÃ– Zndl SÃ¼ddeutschland
+                    [bank_place] => Passau
+                    [bic] => RZOODE77050
+                    [iban] => DE13740201500003119724
+                    [qr_image] => https://nnt.ag/epcqr/15416400068009798.png
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-20 13:49:52
+            [due_date] => 2026-08-03
+            [invoice_ref] => BNR-6120-679
+            [order_no] => 679
+            [payment_type] => GUARANTEED_INVOICE
+            [status] => ON_HOLD
+            [status_code] => 91
+            [test_mode] => 1
+            [tid] => 15416400068009798
+        )
+
+)
+///////////////////////////////////////////////////////////////////////////
+
+payment action authorize/minimum transaction amount for authorize 
+
+==============================================================
+====================== 2026-07-20 12:09
+:47
+ ======================
+===============================================================
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_INVOICE
+            [test_mode] => 1
+            [amount] => 2300
+            [currency] => EUR
+            [order_no] => 687
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [first_name] => test
+                    [last_name] => m
+                    [tel] => 7696676686
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 687
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 687
+            [nn_order_id] => 687
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => -
+                    [state] => Berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [shipping] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [first_name] => test
+                    [house_no] => -
+                    [last_name] => m
+                    [street] => berlin 
+                    [tel] => 7696676686
+                    [zip] => 66862
+                )
+
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 2300
+            [bank_details] => Array
+                (
+                    [account_holder] => Novalnet AG
+                    [bank_name] => Raiffeisenlandesbank OÃ– Zndl SÃ¼ddeutschland
+                    [bank_place] => Passau
+                    [bic] => RZOODE77050
+                    [iban] => DE13740201500003119724
+                    [qr_image] => https://nnt.ag/epcqr/15416400069126007.png
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-20 14:09:48
+            [due_date] => 2026-08-03
+            [invoice_ref] => BNR-6120-687
+            [order_no] => 687
+            [payment_type] => GUARANTEED_INVOICE
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15416400069126007
+        )
+
+)
+/////////////////////////////////////////////////////
+payment status pending:
+
+ ===============================================================
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_INVOICE
+            [test_mode] => 1
+            [amount] => 3300
+            [currency] => EUR
+            [order_no] => 692
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+            [birth_date] => 01.12.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 692
+        )
+
+)
+
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 692
+            [nn_order_id] => 692
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => -
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-12-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 3300
+            [bank_details] => Array
+                (
+                    [account_holder] => Novalnet AG
+                    [bank_name] => Raiffeisenlandesbank OÃ– Zndl SÃ¼ddeutschland
+                    [bank_place] => Passau
+                    [bic] => RZOODE77050
+                    [iban] => DE13740201500003119724
+                    [qr_image] => https://nnt.ag/epcqr/15416400069429004.png
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-20 14:17:17
+            [invoice_ref] => BNR-6120-692
+            [order_no] => 692
+            [payment_type] => GUARANTEED_INVOICE
+            [status] => PENDING
+            [status_code] => 75
+            [test_mode] => 1
+            [tid] => 15416400069429004
+        )
+
+)
+//////////////////////////////////////////////////////////////////////
+enable b2b
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_INVOICE
+            [test_mode] => 1
+            [amount] => 1300
+            [currency] => EUR
+            [order_no] => 697
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [company] => TEST COMPANY ACCEPTED
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 697
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 697
+            [nn_order_id] => 697
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [company] => TEST COMPANY ACCEPTED
+                    [country_code] => DE
+                    [house_no] => -
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 1300
+            [bank_details] => Array
+                (
+                    [account_holder] => Novalnet AG
+                    [bank_name] => Raiffeisenlandesbank OÃ– Zndl SÃ¼ddeutschland
+                    [bank_place] => Passau
+                    [bic] => RZOODE77050
+                    [iban] => DE13740201500003119724
+                    [qr_image] => https://nnt.ag/epcqr/15416400070002373.png
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-20 14:28:21
+            [due_date] => 2026-08-19
+            [invoice_ref] => BNR-6120-697
+            [order_no] => 697
+            [payment_type] => GUARANTEED_INVOICE
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15416400070002373
+        )
+
+)
+guranteed sepa
+
+===============================================================
+====================== 2026-07-20 12:36
+:29
+ ======================
+===============================================================
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [test_mode] => 0
+            [amount] => 5312
+            [currency] => EUR
+            [order_no] => 708
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+            [payment_data] => Array
+                (
+                    [account_holder] => test m
+                    [iban] => DE24 3002 0900 2411 7619 56
+                )
+
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [company] => TEST COMPANY ACCEPTED
+                    [first_name] => test
+                    [last_name] => m
+                    [tel] => 7696676686
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 708
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 708
+            [nn_order_id] => 708
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => -
+                    [state] => Berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [shipping] => Array
+                (
+                    [city] => berlin
+                    [company] => TEST COMPANY ACCEPTED
+                    [country_code] => DE
+                    [first_name] => test
+                    [house_no] => -
+                    [last_name] => m
+                    [street] => berlin 
+                    [tel] => 7696676686
+                    [zip] => 66862
+                )
+
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 5312
+            [currency] => EUR
+            [date] => 2026-07-20 14:36:29
+            [debit_reason_1] => TID 15416400070313248
+            [debit_reason_2] => developer.novalnet.de
+            [due_date] => 2026-07-23
+            [order_no] => 708
+            [payment_data] => Array
+                (
+                    [account_holder] => test m
+                    [bic] => CMCIDEDDXXX
+                    [iban] => DE2XXXXXXXXXXXXXX956
+                )
+
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15416400070313248
+        )
+
+)
+//////////////////////////////////////////////////////
+payment authorize:
+
+===============================================================
+====================== 2026-07-20 12:45
+:56
+ ======================
+===============================================================
+https://payport.novalnet.de/v2/authorize
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [test_mode] => 0
+            [amount] => 3300
+            [currency] => EUR
+            [order_no] => 713
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+            [payment_data] => Array
+                (
+                    [account_holder] => test m
+                    [iban] => DE24 3002 0900 2411 7619 56
+                )
+
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [company] => TEST COMPANY ACCEPTED
+                    [first_name] => test
+                    [last_name] => m
+                    [tel] => 7696676686
+                )
+
+            [birth_date] => 01.11.1858
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 713
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 713
+            [nn_order_id] => 713
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => -
+                    [state] => Berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [birth_date] => 1858-11-01
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [shipping] => Array
+                (
+                    [city] => berlin
+                    [company] => TEST COMPANY ACCEPTED
+                    [country_code] => DE
+                    [first_name] => test
+                    [house_no] => -
+                    [last_name] => m
+                    [street] => berlin 
+                    [tel] => 7696676686
+                    [zip] => 66862
+                )
+
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 3300
+            [authorization] => Array
+                (
+                    [auto_action] => CAPTURE
+                    [expiry_date] => 2026-08-02
+                )
+
+            [currency] => EUR
+            [date] => 2026-07-20 14:45:57
+            [debit_reason_1] => TID 15416400070705634
+            [debit_reason_2] => developer.novalnet.de
+            [due_date] => 2026-07-23
+            [order_no] => 713
+            [payment_data] => Array
+                (
+                    [account_holder] => test m
+                    [bic] => CMCIDEDDXXX
+                    [iban] => DE2XXXXXXXXXXXXXX956
+                )
+
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [status] => ON_HOLD
+            [status_code] => 99
+            [test_mode] => 1
+            [tid] => 15416400070705634
+        )
+
+)
+////////////////////////////////////////////////////////////////////////////////
+
+allow b2b
+
+===============================================================
+====================== 2026-07-20 13:32
+:56
+ ======================
+===============================================================
+https://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [test_mode] => 1
+            [amount] => 1300
+            [currency] => EUR
+            [order_no] => 768
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.2-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+            [payment_data] => Array
+                (
+                    [account_holder] => test m
+                    [iban] => DE24 3002 0900 2411 7619 56
+                )
+
+        )
+
+    [customer] => Array
+        (
+            [first_name] => test
+            [last_name] => m
+            [email] => test@gmail.com
+            [tel] => 7696676686
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [state] => Berlin
+                    [company] => TEST COMPANY ACCEPTED
+                )
+
+            [shipping] => Array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => DE
+                    [company] => TEST COMPANY ACCEPTED
+                    [first_name] => test
+                    [last_name] => m
+                    [tel] => 7696676686
+                )
+
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 768
+        )
+
+)
+
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input5] => nn_order_id
+            [inputval5] => 768
+            [nn_order_id] => 768
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [company] => TEST COMPANY ACCEPTED
+                    [country_code] => DE
+                    [house_no] => -
+                    [state] => Berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => m
+            [shipping] => Array
+                (
+                    [city] => berlin
+                    [company] => TEST COMPANY ACCEPTED
+                    [country_code] => DE
+                    [first_name] => test
+                    [house_no] => -
+                    [last_name] => m
+                    [street] => berlin 
+                    [tel] => 7696676686
+                    [zip] => 66862
+                )
+
+            [tel] => 7696676686
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 1300
+            [currency] => EUR
+            [date] => 2026-07-20 15:32:57
+            [debit_reason_1] => TID 15416400073104047
+            [debit_reason_2] => developer.novalnet.de
+            [due_date] => 2026-07-23
+            [order_no] => 768
+            [payment_data] => Array
+                (
+                    [account_holder] => test m
+                    [bic] => CMCIDEDDXXX
+                    [iban] => DE2XXXXXXXXXXXXXX956
+                )
+
+            [payment_type] => GUARANTEED_DIRECT_DEBIT_SEPA
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15416400073104047
+        )
+
+)
+
+
+
+ 
+ 
+ 
+ 
