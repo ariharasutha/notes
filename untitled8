@@ -1,0 +1,145 @@
+authorize 0 amount,enforce 3d,
+ttps://payport.novalnet.de/v2/payment
+========================  Request =============================
+Array
+(
+    [merchant] => Array
+        (
+            [signature] => 7ibc7ob5|tuJEH3gNbeWJfIHah||nbobljbnmdli0poys|doU3HJVoym7MQ44qf7cpn7pc
+            [tariff] => 10004
+        )
+
+    [transaction] => Array
+        (
+            [payment_type] => CREDITCARD
+            [test_mode] => 1
+            [amount] => 0
+            [currency] => EUR
+            [order_no] => 216
+            [system_name] => wordpress-woocommerce
+            [system_version] => 7.0.1-10.8.1-NN12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+            [payment_data] => Array
+                (
+                    [pan_hash] => 627lgrwa8pmhkz3diyjvf9e1b54c1784115261
+                    [unique_id] => WNbONW82fEgTmXdDuKqgLyhGyiVHgp
+                )
+
+            [enforce_3d] => 1
+            [return_url] => http://wordpress6-test.projectfpm.che/checkout/order-received/216/?key=wc_order_qurpnhDVyYWWH&#038;wc-api=response_novalnet_cc&#038;nn_return=30ad6e3372&#038;order-id=216
+        )
+
+    [customer] => Array
+        (
+            [first_name] => madura
+            [last_name] => G
+            [email] => madura_g@novalnetsolutions.com
+            [customer_ip] => 192.168.2.141
+            [customer_no] => 5
+            [billing] => Array
+                (
+                    [street] => 1/100 test 
+                    [city] => berlin
+                    [zip] => 12345
+                    [country_code] => DE
+                    [state] => Berlin
+                )
+
+            [shipping] => Array
+                (
+                    [same_as_billing] => 1
+                )
+
+        )
+
+    [custom] => Array
+        (
+            [lang] => EN
+            [input5] => nn_order_id
+            [inputval5] => 216
+            [input1] => nn_shopnr
+            [inputval1] => 216
+            [input4] => zero_txn_order_amount
+            [inputval4] => 1300
+        )
+
+)
+/////////////////////////////////////////
+========================  Response =============================
+Array
+(
+    [custom] => Array
+        (
+            [input1] => nn_shopnr
+            [input4] => zero_txn_order_amount
+            [input5] => nn_order_id
+            [inputval1] => 216
+            [inputval4] => 1300
+            [inputval5] => 216
+            [nn_order_id] => 216
+            [nn_shopnr] => 216
+            [zero_txn_order_amount] => 1300
+        )
+
+    [customer] => Array
+        (
+            [billing] => Array
+                (
+                    [city] => berlin
+                    [country_code] => DE
+                    [house_no] => 1/100
+                    [state] => Berlin
+                    [street] => test
+                    [zip] => 12345
+                )
+
+            [customer_ip] => 192.168.2.141
+            [customer_no] => 5
+            [email] => madura_g@novalnetsolutions.com
+            [first_name] => madura
+            [gender] => u
+            [last_name] => G
+            [title] => Ms.
+        )
+
+    [merchant] => Array
+        (
+            [project] => 6120
+            [vendor] => 4
+        )
+
+    [result] => Array
+        (
+            [status] => SUCCESS
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [transaction] => Array
+        (
+            [amount] => 0
+            [currency] => EUR
+            [date] => 2026-07-15 13:35:58
+            [order_no] => 216
+            [payment_data] => Array
+                (
+                    [card_brand] => VISA
+                    [card_expiry_month] => 1
+                    [card_expiry_year] => 2031
+                    [card_holder] => madura G
+                    [card_number] => XXXXXXXXXXXX1091
+                    [cc_3d] => 1
+                    [last_four] => 1091
+                    [token] => R2cB22w22w00a02c-R22w22w22wNJV-V14oDN10k04eB18sB22w20uXNTX16q14o
+                )
+
+            [payment_type] => CREDITCARD
+            [status] => CONFIRMED
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 15415900087418488
+            [txn_secret] => d25c7827d56e3daccea25b0c8b31b6ad
+        )
+
+)

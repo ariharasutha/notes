@@ -1,0 +1,149 @@
+
+array
+(
+    [merchant] => array
+        (
+            [signature] => 7ibc7ob5,tujeh3gnbewjfihah,,nbobljbnmdli0poys,dou3hjvoym7mq44qf7cpn7pc
+            [tariff] => 10003
+        )
+
+    [transaction] => array
+        (
+            [payment_type] => creditcard
+            [test_mode] => 0
+            [amount] => 1300
+            [currency] => eur
+            [order_no] => 260
+            [system_name] => wordpress-woocommerce
+            [system_version] => 70.1-10.80.1-nn12.10.4
+            [system_url] => http://wordpress6-test.projectfpm.che
+            [system_ip] => 192.168.2.5
+            [payment_data] => array
+                (
+                    [pan_hash] => l7v4djup1kzraf5q9hy8623ebc1784176215
+                    [unique_id] => y9zh9q5fpar1vjdzk1np4ujd44v7nl
+                )
+
+            [return_url] => http://wordpress6-test.projectfpm.che/checkout/order-received/260/?key=wc_order_85mypz3e6tdbb&#038,wc-api=response_novalnet_cc&#038,nn_return=52e28b7c63&#038,order-id=260
+        )
+
+    [customer] => array
+        (
+            [first_name] => test
+            [last_name] => t
+            [email] => test@gmail.com
+            [tel] => 6746666687
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [billing] => array
+                (
+                    [street] => berlin 
+                    [city] => berlin
+                    [zip] => 66862
+                    [country_code] => de
+                    [state] => berlin
+                )
+
+            [shipping] => array
+                (
+                    [same_as_billing] => 1
+                )
+
+        )
+
+    [custom] => array
+        (
+            [lang] => en
+            [input5] => nn_order_id
+            [inputval5] => 260
+            [input1] => nn_shopnr
+            [inputval1] => 260
+             )
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+response:
+  
+array
+(
+    [custom] => array
+        (
+            [input1] => nn_shopnr
+            [input5] => nn_order_id
+            [inputval1] => 260
+            [inputval5] => 260
+            [nn_order_id] => 260
+            [nn_shopnr] => 260
+        )
+
+    [customer] => array
+        (
+            [billing] => array
+                (
+                    [city] => berlin
+                    [country_code] => de
+                    [house_no] => -
+                    [state] => berlin
+                    [street] => berlin
+                    [zip] => 66862
+                )
+
+            [customer_ip] => 192.168.2.90
+            [customer_no] => 1
+            [email] => test@gmail.com
+            [first_name] => test
+            [gender] => u
+            [last_name] => t
+            [tel] => 6746666687
+        )
+
+    [merchant] => array
+        (
+            [project] => 6120
+            [vendor] => 4
+        )
+
+    [result] => array
+        (
+            [status] => success
+            [status_code] => 100
+            [status_text] => successful
+        )
+
+    [subscription] => array
+        (
+            [amount] => 1001
+            [currency] => eur
+            [next_cycle_date] => 2026-8-16 6:30:18
+            [payment_type] => creditcard
+            [status] => inactive
+            [subs_id] => 2804225
+            [tid] => 1.54160000199189E+016
+        )
+
+    [transaction] => array
+        (
+            [amount] => 1001
+            [currency] => eur
+            [date] => 2026-7-16 6:30:18
+            [order_no] => 260
+            [payment_data] => array
+                (
+                    [card_brand] => visa
+                    [card_expiry_month] => 12
+                    [card_expiry_year] => 2034
+                    [card_holder] => test t
+                    [card_number] => xxxxxxxxxxxx1091
+                    [cc_3d] => 1
+                    [last_four] => 1091
+                )
+
+            [payment_type] => creditcard
+            [status] => confirmed
+            [status_code] => 100
+            [test_mode] => 1
+            [tid] => 1.54160000199189E+016
+            [txn_secret] => 82ec8fc23f0aefbfc60a46e6b386d521
+        )
+
+)

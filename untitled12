@@ -1,0 +1,38 @@
+guaranteed payment:
+
+Condition
+Allowed B2C countries: Germany, Austria, Switzerland
+Permitted B2B countries: European Union and Switzerland
+Accepted currency: Euro
+Minimum order amount: €9.99
+Minimum age: 18 years
+Billing address and shipping address must be same
+//////////////////////////////////////////////////////////////////////////////////////////////////
+installment payment:
+  
+Conditions
+Allowed B2C countries: Germany, Austria, Switzerland
+Allowed B2B countries: European Union and Switzerland
+Allowed currency: €
+Minimum total instalment amount: 19.98 EUR or more (The minimum amount of an instalment cycle is 9.99 EUR 
+and the minimum instalment cycle that can be offered is 2, which makes it 19.98 EUR).
+Minimum Instalment cycle amount: 9.99 EUR
+The list of offered payment cycles: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 18, 21, 24 and 36. The pre-selected cycle list is 2.
+Age limit: 18 years or more.
+The billing address must be the same as the shipping address.
+
+negative scenario:
+
+guaranteed /installement payment 
+.once worng address fill not  showing  guaranteed payment method
+.must age 18 above->You need to be at least 18 years old
+.declined :detail->Unfortunately, this payment method is not available. Please choose another payment type.
+.pending:->Test order Your order is under verification and we will soon update you with the order status. Please note that this may take upto 24 hours.
+two refund-manualy,
+////////////////////////////////////////////////////////////////////////////////
+.once minimum order amount place order not showing guarntee sepa payment method once ,enalple non force guarntee the normal sepa working
+also guarantee inovice 
+.allow the follwing condition
+
+all in one =15416100047208535
+15416100047527447 
